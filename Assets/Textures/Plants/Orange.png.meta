@@ -26,6 +26,30 @@ TextureImporter:
   - first:
       213: -5679558575872557377
     second: Mug_1_7
+  - first:
+      213: 4121880872312635667
+    second: Orange_0
+  - first:
+      213: 2344270669467322306
+    second: Orange_1
+  - first:
+      213: 4308106298786891140
+    second: Orange_2
+  - first:
+      213: 7874291611447793305
+    second: Orange_3
+  - first:
+      213: 3285381865569172166
+    second: Orange_4
+  - first:
+      213: 7043855894265817204
+    second: Orange_5
+  - first:
+      213: 3988426822137034836
+    second: Orange_6
+  - first:
+      213: -2229105888306426895
+    second: Orange_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +163,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mug_1_0
+      name: Orange_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 413f2e89e1a738200800000000000000
-      internalID: 181122681857569556
+      spriteID: 3110ca090dcd33930800000000000000
+      internalID: 4121880872312635667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_1_1
+      name: Orange_1
       rect:
         serializedVersion: 2
         x: 128
@@ -174,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fefc70729dd8d5ff0800000000000000
-      internalID: -45724457401593873
+      spriteID: 2c787fed0c5888020800000000000000
+      internalID: 2344270669467322306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_1_2
+      name: Orange_2
       rect:
         serializedVersion: 2
         x: 256
@@ -195,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c669ab9a333a8a9c0800000000000000
-      internalID: -3915700433712408980
+      spriteID: 485c0d97ad779cb30800000000000000
+      internalID: 4308106298786891140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_1_3
+      name: Orange_3
       rect:
         serializedVersion: 2
         x: 384
@@ -216,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b57b245437ea10630800000000000000
-      internalID: 3891583363131291483
+      spriteID: 9961f26308a174d60800000000000000
+      internalID: 7874291611447793305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_1_4
+      name: Orange_4
       rect:
         serializedVersion: 2
         x: 512
@@ -237,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15514e89f42ec47d0800000000000000
-      internalID: -2932720425829657263
+      spriteID: 6cab2c86665089d20800000000000000
+      internalID: 3285381865569172166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_1_5
+      name: Orange_5
       rect:
         serializedVersion: 2
         x: 640
@@ -258,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df4465ed687267aa0800000000000000
-      internalID: -6163695579800648451
+      spriteID: 47861caad9dc0c160800000000000000
+      internalID: 7043855894265817204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_1_6
+      name: Orange_6
       rect:
         serializedVersion: 2
         x: 768
@@ -279,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70895afa2dea564f0800000000000000
-      internalID: -836069935894128633
+      spriteID: 4583e1a201db95730800000000000000
+      internalID: 3988426822137034836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_1_7
+      name: Orange_7
       rect:
         serializedVersion: 2
         x: 896
@@ -300,8 +324,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbeb71c11972e21b0800000000000000
-      internalID: -5679558575872557377
+      spriteID: 1fb83c04100a011e0800000000000000
+      internalID: -2229105888306426895
       vertices: []
       indices: 
       edges: []

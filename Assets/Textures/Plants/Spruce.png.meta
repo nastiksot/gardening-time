@@ -26,6 +26,30 @@ TextureImporter:
   - first:
       213: -4280967071878622444
     second: Mug_2_7
+  - first:
+      213: 3549203890467312553
+    second: Spruce_0
+  - first:
+      213: 3579539810297671808
+    second: Spruce_1
+  - first:
+      213: 6860661994336155712
+    second: Spruce_2
+  - first:
+      213: -8492415163942594938
+    second: Spruce_3
+  - first:
+      213: 7125351625428837123
+    second: Spruce_4
+  - first:
+      213: 6513007287316010202
+    second: Spruce_5
+  - first:
+      213: 730205646541710128
+    second: Spruce_6
+  - first:
+      213: 1709968606801807160
+    second: Spruce_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +163,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mug_2_0
+      name: Spruce_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26de8bdc6ccc45770800000000000000
-      internalID: 8598722742784159074
+      spriteID: 9a31db6422e414130800000000000000
+      internalID: 3549203890467312553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_2_1
+      name: Spruce_1
       rect:
         serializedVersion: 2
         x: 128
@@ -174,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85891165cc9227ea0800000000000000
-      internalID: -5876588606171015080
+      spriteID: 08079240e741da130800000000000000
+      internalID: 3579539810297671808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_2_2
+      name: Spruce_2
       rect:
         serializedVersion: 2
         x: 256
@@ -195,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 862438b3477f4a3f0800000000000000
-      internalID: -890314747725790616
+      spriteID: 048fd680cb7f53f50800000000000000
+      internalID: 6860661994336155712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_2_3
+      name: Spruce_3
       rect:
         serializedVersion: 2
         x: 384
@@ -216,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbece410bffa56940800000000000000
-      internalID: 5288826830010109628
+      spriteID: 6869f043761e42a80800000000000000
+      internalID: -8492415163942594938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_2_4
+      name: Spruce_4
       rect:
         serializedVersion: 2
         x: 512
@@ -237,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82a81f7a383f228f0800000000000000
-      internalID: -566622856311371224
+      spriteID: 30320753d8552e260800000000000000
+      internalID: 7125351625428837123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_2_5
+      name: Spruce_5
       rect:
         serializedVersion: 2
         x: 640
@@ -258,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 840e786b94dccf800800000000000000
-      internalID: 647618162913173576
+      spriteID: ad45004de99d26a50800000000000000
+      internalID: 6513007287316010202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_2_6
+      name: Spruce_6
       rect:
         serializedVersion: 2
         x: 768
@@ -279,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9291b72245729ca60800000000000000
-      internalID: 7694724680648431913
+      spriteID: 0336a1faa26322a00800000000000000
+      internalID: 730205646541710128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_2_7
+      name: Spruce_7
       rect:
         serializedVersion: 2
         x: 896
@@ -300,8 +324,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 413d7813123f694c0800000000000000
-      internalID: -4280967071878622444
+      spriteID: 837cd7953670bb710800000000000000
+      internalID: 1709968606801807160
       vertices: []
       indices: 
       edges: []

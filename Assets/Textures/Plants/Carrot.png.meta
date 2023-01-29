@@ -20,6 +20,27 @@ TextureImporter:
   - first:
       213: -2129735146829748346
     second: Mug_6_5
+  - first:
+      213: -5859083586626064994
+    second: Carrot_0
+  - first:
+      213: -2094157912208876536
+    second: Carrot_1
+  - first:
+      213: -830467699528618894
+    second: Carrot_2
+  - first:
+      213: 3721053832486967156
+    second: Carrot_3
+  - first:
+      213: -3855089239954288668
+    second: Carrot_4
+  - first:
+      213: 1746509244472477445
+    second: Carrot_5
+  - first:
+      213: 3928329487851121431
+    second: Carrot_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,7 +154,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mug_6_0
+      name: Carrot_0
       rect:
         serializedVersion: 2
         x: 0
@@ -147,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae0d32df920f83fd0800000000000000
-      internalID: -2361873941424516886
+      spriteID: e9de4dd458a50bea0800000000000000
+      internalID: -5859083586626064994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_6_1
+      name: Carrot_1
       rect:
         serializedVersion: 2
         x: 128
@@ -168,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e97247a91f1ca69c0800000000000000
-      internalID: -3933118081132124258
+      spriteID: 80c5733697e00f2e0800000000000000
+      internalID: -2094157912208876536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_6_2
+      name: Carrot_2
       rect:
         serializedVersion: 2
         x: 256
@@ -189,14 +210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a20e2dd368dcf4c60800000000000000
-      internalID: 7804682655702900778
+      spriteID: 27c292cf6069974f0800000000000000
+      internalID: -830467699528618894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_6_3
+      name: Carrot_3
       rect:
         serializedVersion: 2
         x: 384
@@ -210,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dfc16f38717624d0800000000000000
-      internalID: -3159713327280435247
+      spriteID: 477dd73eeb6d3a330800000000000000
+      internalID: 3721053832486967156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_6_4
+      name: Carrot_4
       rect:
         serializedVersion: 2
         x: 512
@@ -231,14 +252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5c87c014b104dcb0800000000000000
-      internalID: -4840241826629186468
+      spriteID: 4ef081be2c8ff7ac0800000000000000
+      internalID: -3855089239954288668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_6_5
+      name: Carrot_5
       rect:
         serializedVersion: 2
         x: 640
@@ -252,8 +273,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6876c83fa29a172e0800000000000000
-      internalID: -2129735146829748346
+      spriteID: 507c7b987e8dc3810800000000000000
+      internalID: 1746509244472477445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carrot_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bee042bda348630800000000000000
+      internalID: 3928329487851121431
       vertices: []
       indices: 
       edges: []

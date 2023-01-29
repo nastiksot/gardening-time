@@ -18,10 +18,10 @@ MonoBehaviour:
   GrownTime: 5
   FloweringTime: 5
   Sprites:
-  - {fileID: 5815154368124410633, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
-  - {fileID: 5061021292654849314, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
-  - {fileID: -963046115961443144, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
-  - {fileID: 8214930027446991899, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
-  - {fileID: -4933585464229010508, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
-  - {fileID: 9136679963986919182, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
-  - {fileID: 432311163759119195, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
+  - {fileID: 3366512764809018327, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
+  - {fileID: -8415520048504749795, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
+  - {fileID: 8719045189030842104, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
+  - {fileID: -6707424305868594977, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
+  - {fileID: 8816229459604964126, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
+  - {fileID: 1151544086162445305, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
+  - {fileID: 4835470820753011333, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}

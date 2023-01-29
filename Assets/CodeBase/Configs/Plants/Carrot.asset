@@ -18,9 +18,10 @@ MonoBehaviour:
   GrownTime: 5
   FloweringTime: 5
   Sprites:
-  - {fileID: -2361873941424516886, guid: 42d4770211adda24baafdb7629f89305, type: 3}
-  - {fileID: -3933118081132124258, guid: 42d4770211adda24baafdb7629f89305, type: 3}
-  - {fileID: 7804682655702900778, guid: 42d4770211adda24baafdb7629f89305, type: 3}
-  - {fileID: -3159713327280435247, guid: 42d4770211adda24baafdb7629f89305, type: 3}
-  - {fileID: -4840241826629186468, guid: 42d4770211adda24baafdb7629f89305, type: 3}
-  - {fileID: -2129735146829748346, guid: 42d4770211adda24baafdb7629f89305, type: 3}
+  - {fileID: 3928329487851121431, guid: 42d4770211adda24baafdb7629f89305, type: 3}
+  - {fileID: -5859083586626064994, guid: 42d4770211adda24baafdb7629f89305, type: 3}
+  - {fileID: -2094157912208876536, guid: 42d4770211adda24baafdb7629f89305, type: 3}
+  - {fileID: -830467699528618894, guid: 42d4770211adda24baafdb7629f89305, type: 3}
+  - {fileID: 3721053832486967156, guid: 42d4770211adda24baafdb7629f89305, type: 3}
+  - {fileID: -3855089239954288668, guid: 42d4770211adda24baafdb7629f89305, type: 3}
+  - {fileID: 1746509244472477445, guid: 42d4770211adda24baafdb7629f89305, type: 3}

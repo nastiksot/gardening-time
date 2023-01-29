@@ -29,6 +29,36 @@ TextureImporter:
   - first:
       213: 3727062727323300295
     second: Mug_5_8
+  - first:
+      213: 7293598183456022363
+    second: Apple_0
+  - first:
+      213: 3211865404380153573
+    second: Apple_1
+  - first:
+      213: 4808522734667448011
+    second: Apple_2
+  - first:
+      213: -8577097333041121892
+    second: Apple_3
+  - first:
+      213: 1419576285154770477
+    second: Apple_4
+  - first:
+      213: -7706788487438311687
+    second: Apple_5
+  - first:
+      213: 8638710384840876012
+    second: Apple_6
+  - first:
+      213: -4689406079702324653
+    second: Apple_7
+  - first:
+      213: -4804661220611782958
+    second: Apple_8
+  - first:
+      213: 542562350195365616
+    second: Apple_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,7 +172,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mug_5_0
+      name: Apple_0
       rect:
         serializedVersion: 2
         x: 0
@@ -156,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fe2f39a55aba4a50800000000000000
-      internalID: 6506217488764579568
+      spriteID: b5f945b97e0183560800000000000000
+      internalID: 7293598183456022363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_5_1
+      name: Apple_1
       rect:
         serializedVersion: 2
         x: 128
@@ -177,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 893103e3fec89d4a0800000000000000
-      internalID: -6568063622374747240
+      spriteID: 5e6027e6196d29c20800000000000000
+      internalID: 3211865404380153573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_5_2
+      name: Apple_2
       rect:
         serializedVersion: 2
         x: 256
@@ -198,14 +228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f52e894732dd35360800000000000000
-      internalID: 7157307377171620447
+      spriteID: bce3e3653fd4bb240800000000000000
+      internalID: 4808522734667448011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_5_3
+      name: Apple_3
       rect:
         serializedVersion: 2
         x: 384
@@ -219,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 078f23e516fcd09d0800000000000000
-      internalID: -2806358975682774928
+      spriteID: c9532244b6708f880800000000000000
+      internalID: -8577097333041121892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_5_4
+      name: Apple_4
       rect:
         serializedVersion: 2
         x: 512
@@ -240,14 +270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8837ba66b9430a810800000000000000
-      internalID: 1774476095231062920
+      spriteID: d2ef7303c1953b310800000000000000
+      internalID: 1419576285154770477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_5_5
+      name: Apple_5
       rect:
         serializedVersion: 2
         x: 640
@@ -261,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb81da60223007900800000000000000
-      internalID: 680046988408723646
+      spriteID: 9fe5b27f3bcfb0590800000000000000
+      internalID: -7706788487438311687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_5_6
+      name: Apple_6
       rect:
         serializedVersion: 2
         x: 768
@@ -282,14 +312,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41358abfa030362a0800000000000000
-      internalID: -6745544471164202220
+      spriteID: cef1bed335dd2e770800000000000000
+      internalID: 8638710384840876012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_5_7
+      name: Apple_7
       rect:
         serializedVersion: 2
         x: 896
@@ -303,14 +333,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d35e7028d25c528f0800000000000000
-      internalID: -565829378919373507
+      spriteID: 35a29cb1402ebeeb0800000000000000
+      internalID: -4689406079702324653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_5_8
+      name: Apple_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -324,8 +354,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c134bdbdcf29b330800000000000000
-      internalID: 3727062727323300295
+      spriteID: 2d60757731a625db0800000000000000
+      internalID: -4804661220611782958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Apple_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f655e73591978700800000000000000
+      internalID: 542562350195365616
       vertices: []
       indices: 
       edges: []

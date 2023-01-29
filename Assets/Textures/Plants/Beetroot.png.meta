@@ -20,6 +20,27 @@ TextureImporter:
   - first:
       213: -8751409472742381039
     second: Mug_7_5
+  - first:
+      213: -2122261477782967425
+    second: Beetroot_0
+  - first:
+      213: 758563250068289762
+    second: Beetroot_1
+  - first:
+      213: 7804225656587267082
+    second: Beetroot_2
+  - first:
+      213: 2022447033300906978
+    second: Beetroot_3
+  - first:
+      213: -6847975798899432476
+    second: Beetroot_4
+  - first:
+      213: -8693008634253531721
+    second: Beetroot_5
+  - first:
+      213: 1703535211376263217
+    second: Beetroot_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,7 +154,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mug_7_0
+      name: Beetroot_0
       rect:
         serializedVersion: 2
         x: 0
@@ -147,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 657826150c924fa80800000000000000
-      internalID: -8434070296182225066
+      spriteID: f7b20402e663c82e0800000000000000
+      internalID: -2122261477782967425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_7_1
+      name: Beetroot_1
       rect:
         serializedVersion: 2
         x: 128
@@ -168,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56a785f2e432f0b90800000000000000
-      internalID: -7273556054471312795
+      spriteID: 2e87cf3c145f68a00800000000000000
+      internalID: 758563250068289762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_7_2
+      name: Beetroot_2
       rect:
         serializedVersion: 2
         x: 256
@@ -189,14 +210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0570fe0f163aee30800000000000000
-      internalID: 4533495481924351245
+      spriteID: a0cafd7d2ed2e4c60800000000000000
+      internalID: 7804225656587267082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_7_3
+      name: Beetroot_3
       rect:
         serializedVersion: 2
         x: 384
@@ -210,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce56dbd71df769f10800000000000000
-      internalID: 2276147199416821228
+      spriteID: 2e371f48cdc211c10800000000000000
+      internalID: 2022447033300906978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_7_4
+      name: Beetroot_4
       rect:
         serializedVersion: 2
         x: 512
@@ -231,14 +252,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ff5f04f8b3138490800000000000000
-      internalID: -7745325249057562636
+      spriteID: 4e3a0240b4a17f0a0800000000000000
+      internalID: -6847975798899432476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_7_5
+      name: Beetroot_5
       rect:
         serializedVersion: 2
         x: 640
@@ -252,8 +273,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11aa335937fbc8680800000000000000
-      internalID: -8751409472742381039
+      spriteID: 7b52ae564ba3c5780800000000000000
+      internalID: -8693008634253531721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beetroot_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130c370cf3c24a710800000000000000
+      internalID: 1703535211376263217
       vertices: []
       indices: 
       edges: []

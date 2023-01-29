@@ -17,6 +17,24 @@ TextureImporter:
   - first:
       213: 3476992495273322826
     second: Mug_12_4
+  - first:
+      213: 5614637178320563061
+    second: Rose_0
+  - first:
+      213: 5910984749590454971
+    second: Rose_1
+  - first:
+      213: -2326384682445370838
+    second: Rose_2
+  - first:
+      213: -2486830211712430900
+    second: Rose_3
+  - first:
+      213: -8867381439413725629
+    second: Rose_4
+  - first:
+      213: 8890482793539167604
+    second: Rose_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,7 +148,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mug_12_0
+      name: Rose_0
       rect:
         serializedVersion: 2
         x: 0
@@ -144,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3db9e0dc8f2ed1310800000000000000
-      internalID: 1377506619265293267
+      spriteID: 57baf7c14c23bed40800000000000000
+      internalID: 5614637178320563061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_12_1
+      name: Rose_1
       rect:
         serializedVersion: 2
         x: 128
@@ -165,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fe4fd847b2839220800000000000000
-      internalID: 2491478742579236599
+      spriteID: bb22710ef49080250800000000000000
+      internalID: 5910984749590454971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_12_2
+      name: Rose_2
       rect:
         serializedVersion: 2
         x: 256
@@ -186,14 +204,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd5e1d2832de690b0800000000000000
-      internalID: -5722125539753204261
+      spriteID: a2a0feff47507bfd0800000000000000
+      internalID: -2326384682445370838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_12_3
+      name: Rose_3
       rect:
         serializedVersion: 2
         x: 384
@@ -207,14 +225,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c71bfe6c652b62600800000000000000
-      internalID: 443237699117101436
+      spriteID: ccccb2629110d7dd0800000000000000
+      internalID: -2486830211712430900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mug_12_4
+      name: Rose_4
       rect:
         serializedVersion: 2
         x: 512
@@ -228,8 +246,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a492777a042c04030800000000000000
-      internalID: 3476992495273322826
+      spriteID: 3465adfef8bb0f480800000000000000
+      internalID: -8867381439413725629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rose_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475ef963ff6516b70800000000000000
+      internalID: 8890482793539167604
       vertices: []
       indices: 
       edges: []

@@ -8,5 +8,5 @@ public class PlantsConfig : ScriptableObject
     public int RewardCost;
     public float GrownTime;
     public float FloweringTime;
-    public Sprite[] GrownSprites;
+    public Sprite[] Sprites;
 }

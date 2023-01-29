@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
+  m_Name: Spruce
+  m_EditorClassIdentifier: 
+  Type: 4
+  Cost: 3
+  RewardCost: 5
+  GrownTime: 5
+  FloweringTime: 5
+  GrownSprites:
+  - {fileID: 8598722742784159074, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
+  - {fileID: -5876588606171015080, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
+  - {fileID: -890314747725790616, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
+  - {fileID: 5288826830010109628, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
+  - {fileID: -566622856311371224, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
+  - {fileID: 647618162913173576, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
+  - {fileID: 7694724680648431913, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
+  - {fileID: -4280967071878622444, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}

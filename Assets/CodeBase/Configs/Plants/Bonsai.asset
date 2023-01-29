@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
+  m_Name: Bonsai
+  m_EditorClassIdentifier: 
+  Type: 2
+  Cost: 15
+  RewardCost: 5
+  GrownTime: 5
+  FloweringTime: 5
+  GrownSprites:
+  - {fileID: -8310630647339642966, guid: 6e21d3a150d968248878114d94978a40, type: 3}
+  - {fileID: 9144760875851825584, guid: 6e21d3a150d968248878114d94978a40, type: 3}
+  - {fileID: -1274004190658921056, guid: 6e21d3a150d968248878114d94978a40, type: 3}
+  - {fileID: 1587373099874081206, guid: 6e21d3a150d968248878114d94978a40, type: 3}
+  - {fileID: -5026683021331773407, guid: 6e21d3a150d968248878114d94978a40, type: 3}
+  - {fileID: -2338645522771142822, guid: 6e21d3a150d968248878114d94978a40, type: 3}
+  - {fileID: 1380485763781402017, guid: 6e21d3a150d968248878114d94978a40, type: 3}
+  - {fileID: 7338954437287532435, guid: 6e21d3a150d968248878114d94978a40, type: 3}

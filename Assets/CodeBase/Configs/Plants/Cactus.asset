@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
+  m_Name: Cactus
+  m_EditorClassIdentifier: 
+  Type: 3
+  Cost: 3
+  RewardCost: 5
+  GrownTime: 5
+  FloweringTime: 5
+  GrownSprites:
+  - {fileID: 7873444928579934181, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
+  - {fileID: 4438351552130452648, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
+  - {fileID: -8484647995636279456, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
+  - {fileID: 1464250414856482592, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
+  - {fileID: -4471450805393876877, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
+  - {fileID: -6142298138049817622, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
+  - {fileID: -6977608548097279171, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
+  - {fileID: 1742208062423336634, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
+  - {fileID: -4182094963593053772, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}

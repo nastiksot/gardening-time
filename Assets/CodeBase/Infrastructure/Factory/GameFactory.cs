@@ -18,7 +18,7 @@ namespace CodeBase.Services.SaveLoad
   
         public void InstantiateHUD()
         {
-           GameObject hud = InstantiateRegistered(AssetPath.MenuPrefabPath);
+           // GameObject hud = InstantiateRegistered(AssetPath.MenuPrefabPath);
         }
 
         public void Cleanup()

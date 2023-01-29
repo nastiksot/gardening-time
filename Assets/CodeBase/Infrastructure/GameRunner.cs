@@ -1,5 +1,4 @@
-﻿using CodeBase.Infrastructure.Services;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CodeBase.Infrastructure
 {
@@ -13,16 +12,6 @@ namespace CodeBase.Infrastructure
             {
                 Instantiate(GameBootstrapperPrefab);
             }
-        }
-    }
-
-    public class Game
-    {
-        public readonly GameStateMachine StateMachine;
-
-        public Game(ICoroutineRunner coroutineRunner, LoadingCanvas loadingCanvas)
-        {
-            StateMachine = new GameStateMachine(new SceneLoader(coroutineRunner), loadingCanvas, ServiceLocator.Container);
         }
     }
 }

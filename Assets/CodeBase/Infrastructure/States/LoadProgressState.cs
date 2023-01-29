@@ -1,4 +1,5 @@
 ﻿using CodeBase.Data;
+using CodeBase.Inventory;
 using CodeBase.PersistentProgress.Services;
 using CodeBase.Services.SaveLoad;
 
@@ -36,7 +37,14 @@ namespace CodeBase.Infrastructure.States
 
         private PlayerProgress NewProgress()
         {
-            var progress = new PlayerProgress();
+            var progress = new PlayerProgress(state: new State(coins: 0));
+            progress.state.inventoryPlants.Add(new Plant(count: 1, type: PlantType.Apple));
+            progress.state.inventoryPlants.Add(new Plant(count: 1, type: PlantType.Rose));
+            progress.state.inventoryPlants.Add(new Plant(count: 1, type: PlantType.Cactus));
+            progress.state.inventoryPlants.Add(new Plant(count: 1, type: PlantType.Bonsai));
+            progress.state.inventoryPlants.Add(new Plant(count: 1, type: PlantType.Pumpkin));
+            progress.state.inventoryPlants.Add(new Plant(count: 1, type: PlantType.Orange));
+            progress.state.inventoryPlants.Add(new Plant(count: 1, type: PlantType.Plum));
             return progress;
         }
     }

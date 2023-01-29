@@ -10,11 +10,11 @@ namespace CodeBase.Inventory
         [SerializeField] private TMP_Text itemName;
         [SerializeField] private TMP_Text count;
 
-        public void Initialize(PlantsConfig plantsConfig, int countItem)
+        public void Initialize(Sprite sprite, string itemName, int countItem)
         {
-            image.sprite = plantsConfig.Sprites[0];
-            itemName.text = plantsConfig.name;
-            count.name = countItem.ToString();
+            image.sprite = sprite;
+            this.itemName.text = itemName;
+            count.text = countItem.ToString();
         }
     }
 }

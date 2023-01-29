@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: 
   Type: 0
-  Sprite: {fileID: 0}
   Cost: 3
   RewardCost: 5
   GrownTime: 5
   FloweringTime: 5
-  GrownSprites:
+  Sprites:
   - {fileID: 6506217488764579568, guid: 51cf2e275f5aba44996e0df03c4f600a, type: 3}
   - {fileID: -6568063622374747240, guid: 51cf2e275f5aba44996e0df03c4f600a, type: 3}
   - {fileID: 7157307377171620447, guid: 51cf2e275f5aba44996e0df03c4f600a, type: 3}

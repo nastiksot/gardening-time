@@ -8,6 +8,15 @@ namespace CodeBase.Data
     public class State
     {
         public int coins;
-        public List<Plant> inventoryPlants;
+        public List<Plant> inventoryPlants = new List<Plant>();
+
+        public State()
+        {
+        }
+
+        public State(int coins)
+        {
+            this.coins = coins;
+        }
     }
 }

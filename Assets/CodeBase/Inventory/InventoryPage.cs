@@ -9,11 +9,12 @@ namespace CodeBase.Inventory
         private List<InventoryItem> _inventoryItems = new List<InventoryItem>();
         private const int MaxItemValue = 6;
         
-        public bool TryAdd(PlantsConfig plantsConfig, int itemCount)
+        public bool TryAdd(Sprite sprite, string itemName, int countItem)
         {
-            if (_inventoryItems.Count < MaxItemValue) return false;
-            InventoryItem item = Instantiate(inventoryItemPrefab);
-            item.Initialize(plantsConfig, itemCount);
+            if (_inventoryItems.Count >= MaxItemValue) return false;
+            InventoryItem item = Instantiate(inventoryItemPrefab, transform);
+            _inventoryItems.Add(item);
+            item.Initialize(sprite, itemName, countItem);
             return true;
         }
     }

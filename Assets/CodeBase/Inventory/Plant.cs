@@ -7,5 +7,15 @@ namespace CodeBase.Inventory
     {
         public PlantType type;
         public int count;
+
+        public Plant()
+        {
+        }
+
+        public Plant(int count, PlantType type)
+        {
+            this.count = count;
+            this.type = type;
+        }
     }
 }

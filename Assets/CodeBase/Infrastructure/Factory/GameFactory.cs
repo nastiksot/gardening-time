@@ -18,7 +18,7 @@ namespace CodeBase.Services.SaveLoad
   
         public void InstantiateHUD()
         {
-           // GameObject hud = InstantiateRegistered(AssetPath.MenuPrefabPath);
+           GameObject hud = InstantiateRegistered(AssetPath.MenuPrefabPath);
         }
 
         public void Cleanup()
@@ -34,9 +34,9 @@ namespace CodeBase.Services.SaveLoad
             return instantiate;
         }
 
-        private void RegisterProgressWatchers(GameObject hero)
+        private void RegisterProgressWatchers(GameObject gameObject)
         {
-            foreach (ISavedProgressReader progressReader in hero.GetComponentsInChildren<ISavedProgressReader>())
+            foreach (ISavedProgressReader progressReader in gameObject.GetComponentsInChildren<ISavedProgressReader>())
             {
                 Register(progressReader);
             }
@@ -51,10 +51,5 @@ namespace CodeBase.Services.SaveLoad
 
             ProgressReaders.Add(progressReader);
         }
-    }
-
-    public static class AssetPath
-    {
-        public const string MenuPrefabPath = "Menu/Menu";
     }
 }

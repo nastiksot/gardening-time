@@ -242,6 +242,19 @@ MonoBehaviour:
   rightArrowButton: {fileID: 4869006101976014038}
   inventoryContainer: {fileID: 4869006101514747784}
   inventoryPagePrefab: {fileID: 7303274383794845051, guid: 129d746797908e145ac9a50e70455715, type: 3}
+  _plantsConfigs:
+  - {fileID: 11400000, guid: 98433090b8a7d0346a3c2b954408b9fb, type: 2}
+  - {fileID: 11400000, guid: cd500d1d3b2f5df4da11b7c97c6e41f2, type: 2}
+  - {fileID: 11400000, guid: 893019b46827c9e4aba2aa44fa33d099, type: 2}
+  - {fileID: 11400000, guid: a1861082c2de48349b558b7efa79e2f1, type: 2}
+  - {fileID: 11400000, guid: 3fa2bd1498736ef4795655130c373f2f, type: 2}
+  - {fileID: 11400000, guid: 849c896d2d9837c4e92fbbd82ddb28c3, type: 2}
+  - {fileID: 11400000, guid: 2bf631c8cf8f6164db173dfdffa01e1f, type: 2}
+  - {fileID: 11400000, guid: b8bc5d60059b6a84d844cf0affabcec6, type: 2}
+  - {fileID: 11400000, guid: 96e9fda880518164f813ac61439d73cc, type: 2}
+  - {fileID: 11400000, guid: 7ca0ebe93ea662e45a63d482761ef1b4, type: 2}
+  - {fileID: 11400000, guid: 93337b3f0f587a64280b6e42f05c9445, type: 2}
+  - {fileID: 11400000, guid: edaecd779da6d274eb473b170f033e70, type: 2}
 --- !u!114 &4869006101514747781
 MonoBehaviour:
   m_ObjectHideFlags: 0

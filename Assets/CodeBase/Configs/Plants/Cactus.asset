@@ -17,7 +17,7 @@ MonoBehaviour:
   RewardCost: 5
   GrownTime: 5
   FloweringTime: 5
-  GrownSprites:
+  Sprites:
   - {fileID: 7873444928579934181, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
   - {fileID: 4438351552130452648, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
   - {fileID: -8484647995636279456, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}

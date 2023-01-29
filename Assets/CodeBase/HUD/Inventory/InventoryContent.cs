@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using CodeBase.Data;
 using CodeBase.Infrastructure.Services;
@@ -26,13 +25,6 @@ namespace CodeBase.Inventory
             SubscribeOnScrollButtons();
         }
 
-        private InventoryPage InstantiateInventoryPage()
-        {
-            InventoryPage inventoryPage = Instantiate(inventoryPagePrefab, transform);
-            scrollContentList.Add(inventoryPage);
-            return inventoryPage;
-        }
-
         public void LoadProgress(PlayerProgress progress)
         {
             List<Plant> inventoryPlants = progress.state.inventoryPlants;
@@ -40,8 +32,9 @@ namespace CodeBase.Inventory
             {
                 PlantsConfig plantsConfig = _plantsConfigs.FirstOrDefault(x => x.Type == inventoryPlants[i].type);
                 if (plantsConfig == null) continue;
-                foreach (InventoryPage inventoryPage in scrollContentList)
+                for (var j = 0; j < scrollContentList.Count; )
                 {
+                    InventoryPage inventoryPage = scrollContentList[j];
                     Sprite plantSprite = plantsConfig.Sprites[0];
                     var plantName = inventoryPlants[i].type.ToString();
                     int plantCount = inventoryPlants[i].count;
@@ -63,6 +56,13 @@ namespace CodeBase.Inventory
         {
             rightArrowButton.onClick.AddListener(() => ScrollToPage(ScrollSide.Right, inventoryContainer));
             leftArrowButton.onClick.AddListener(() => ScrollToPage(ScrollSide.Left, inventoryContainer));
+        }
+        
+        private InventoryPage InstantiateInventoryPage()
+        {
+            InventoryPage inventoryPage = Instantiate(inventoryPagePrefab, transform);
+            scrollContentList.Add(inventoryPage);
+            return inventoryPage;
         }
     }
 }

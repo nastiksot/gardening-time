@@ -16,9 +16,9 @@ public abstract class CanvasScroll<T> : MonoBehaviour where T : Behaviour
     [SerializeField] private protected List<T> scrollContentList = new List<T>();
 
 
-    private protected int currentPageIndex;
+    private int _currentPageIndex;
 
-    protected void ScrollAnimation(List<T> content, float endXPosition, float duration)
+    private void ScrollAnimation(List<T> content, float endXPosition, float duration)
     {
         for (var i = 0; i < content.Count; i++)
         {
@@ -28,21 +28,21 @@ public abstract class CanvasScroll<T> : MonoBehaviour where T : Behaviour
     
     private protected virtual void ScrollToPage(ScrollSide scrollSide, RectTransform rectTransform)
     {
-        var previousPage = currentPageIndex - 1 >= 0 ? scrollContentList[currentPageIndex - 1] : null;
-        var nextPage = currentPageIndex + 1 < scrollContentList.Count
-            ? scrollContentList[currentPageIndex + 1]
+        T previousPage = _currentPageIndex - 1 >= 0 ? scrollContentList[_currentPageIndex - 1] : null;
+        T nextPage = _currentPageIndex + 1 < scrollContentList.Count
+            ? scrollContentList[_currentPageIndex + 1]
             : null;
-        var rectWidth = rectTransform.rect.width;
+        float rectWidth = rectTransform.rect.width;
         switch (scrollSide)
         {
             case ScrollSide.Left:
                 if (previousPage == null) return;
-                currentPageIndex--;
+                _currentPageIndex--;
                 ScrollAnimation(scrollContentList, rectWidth, animationTime);
                 break;
             case ScrollSide.Right:
                 if (nextPage == null) return;
-                currentPageIndex++;
+                _currentPageIndex++;
                 ScrollAnimation(scrollContentList, -rectWidth, animationTime);
                 break;
             default:

@@ -735,6 +735,7 @@ GameObject:
   - component: {fileID: 4869006102267211109}
   - component: {fileID: 4869006102267211108}
   - component: {fileID: 4869006102267211110}
+  - component: {fileID: 60602543225384}
   m_Layer: 5
   m_Name: InventroryPanel
   m_TagString: Untagged
@@ -812,3 +813,16 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &60602543225384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4869006102267211114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb126f68c28812745bbfcd426c434737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 4869006102267211110}

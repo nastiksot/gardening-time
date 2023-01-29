@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
-  Type: 0
-  Cost: 3
-  RewardCost: 5
-  GrownTime: 5
-  FloweringTime: 5
-  Sprites:
+  type: 0
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
   - {fileID: 7293598183456022363, guid: 51cf2e275f5aba44996e0df03c4f600a, type: 3}
   - {fileID: 3211865404380153573, guid: 51cf2e275f5aba44996e0df03c4f600a, type: 3}
   - {fileID: 4808522734667448011, guid: 51cf2e275f5aba44996e0df03c4f600a, type: 3}
@@ -28,3 +28,4 @@ MonoBehaviour:
   - {fileID: -4689406079702324653, guid: 51cf2e275f5aba44996e0df03c4f600a, type: 3}
   - {fileID: -4804661220611782958, guid: 51cf2e275f5aba44996e0df03c4f600a, type: 3}
   - {fileID: 542562350195365616, guid: 51cf2e275f5aba44996e0df03c4f600a, type: 3}
+  prefab: {fileID: 5914791769601851676, guid: 0f432e4375d8e354cb022456e99b21a6, type: 3}

@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
   m_Name: Pumpkin
   m_EditorClassIdentifier: 
-  Type: 9
-  Cost: 3
-  RewardCost: 5
-  GrownTime: 5
-  FloweringTime: 5
-  Sprites:
+  type: 9
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
   - {fileID: -3545189308076068758, guid: de3b7fc80b78668419d4381409c1f036, type: 3}
   - {fileID: 4907745874458294902, guid: de3b7fc80b78668419d4381409c1f036, type: 3}
   - {fileID: -7487728316265015285, guid: de3b7fc80b78668419d4381409c1f036, type: 3}
   - {fileID: -25557983830139815, guid: de3b7fc80b78668419d4381409c1f036, type: 3}
   - {fileID: 7185039186225281475, guid: de3b7fc80b78668419d4381409c1f036, type: 3}
   - {fileID: -8333431928182952089, guid: de3b7fc80b78668419d4381409c1f036, type: 3}
+  prefab: {fileID: 117729335681984643, guid: 602ac2f71867e4442a0d35ff26a26175, type: 3}

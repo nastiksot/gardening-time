@@ -6,9 +6,24 @@ namespace CodeBase.Inventory
 {
     public class InventoryItem : MonoBehaviour
     {
-        [SerializeField] private Image image;
-        [SerializeField] private TMP_Text itemName;
-        [SerializeField] private TMP_Text count;
+        [SerializeField]
+        Image image;
+        [SerializeField]
+        TMP_Text itemName;
+        [SerializeField]
+        TMP_Text count;
+        [SerializeField]
+        Button itemButton;
+
+        void Awake()
+        {
+            itemButton.onClick.AddListener(OnItemButtonPressed);
+        }
+
+        void OnItemButtonPressed()
+        {
+            
+        }
 
         public void Initialize(Sprite sprite, string itemName, int countItem)
         {

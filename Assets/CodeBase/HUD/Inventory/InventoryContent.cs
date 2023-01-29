@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using CodeBase.Data;
 using CodeBase.Infrastructure.Services;
 using CodeBase.Services.SaveLoad;
+using CodeBase.Services.StaticData;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,32 +10,37 @@ namespace CodeBase.Inventory
 {
     public class InventoryContent : CanvasScroll<InventoryPage>, ISavedProgress
     {
-        [SerializeField] private Button leftArrowButton;
-        [SerializeField] private Button rightArrowButton;
-        [SerializeField] private RectTransform inventoryContainer;
-        [SerializeField] private InventoryPage inventoryPagePrefab;
-        [SerializeField] private PlantsConfig[] _plantsConfigs;
+        [SerializeField]
+        Button leftArrowButton;
+        [SerializeField]
+        Button rightArrowButton;
+        [SerializeField]
+        RectTransform inventoryContainer;
+        [SerializeField]
+        InventoryPage inventoryPagePrefab;
+  
+        ISaveLoadService m_SaveLoadService;
+        IStaticDataService m_StaticDataService;
 
-        private ISaveLoadService _saveLoadService;
-
-        private void Awake()
+        void Awake()
         {
-            _saveLoadService = ServiceLocator.Container.Single<ISaveLoadService>();
+            m_SaveLoadService = ServiceLocator.Container.Single<ISaveLoadService>();
+            m_StaticDataService = ServiceLocator.Container.Single<IStaticDataService>();
             InstantiateInventoryPage();
             SubscribeOnScrollButtons();
         }
 
         public void LoadProgress(PlayerProgress progress)
         {
-            List<Plant> inventoryPlants = progress.state.inventoryPlants;
+            List<PlantData> inventoryPlants = progress.state.inventoryPlants;
             for (var i = 0; i < inventoryPlants.Count; i++)
             {
-                PlantsConfig plantsConfig = _plantsConfigs.FirstOrDefault(x => x.Type == inventoryPlants[i].type);
+                PlantsConfig plantsConfig = m_StaticDataService.ForPlant(inventoryPlants[i].type);
                 if (plantsConfig == null) continue;
-                for (var j = 0; j < scrollContentList.Count; )
+                for (var j = 0; j < scrollContentList.Count;)
                 {
                     InventoryPage inventoryPage = scrollContentList[j];
-                    Sprite plantSprite = plantsConfig.Sprites[0];
+                    Sprite plantSprite = plantsConfig.sprites[0];
                     var plantName = inventoryPlants[i].type.ToString();
                     int plantCount = inventoryPlants[i].count;
 
@@ -48,17 +53,15 @@ namespace CodeBase.Inventory
             }
         }
 
-        public void UpdateProgress(PlayerProgress progress)
-        {
-        }
+        public void UpdateProgress(PlayerProgress progress) { }
 
-        private void SubscribeOnScrollButtons()
+        void SubscribeOnScrollButtons()
         {
             rightArrowButton.onClick.AddListener(() => ScrollToPage(ScrollSide.Right, inventoryContainer));
             leftArrowButton.onClick.AddListener(() => ScrollToPage(ScrollSide.Left, inventoryContainer));
         }
-        
-        private InventoryPage InstantiateInventoryPage()
+
+        InventoryPage InstantiateInventoryPage()
         {
             InventoryPage inventoryPage = Instantiate(inventoryPagePrefab, transform);
             scrollContentList.Add(inventoryPage);

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
   m_Name: Orange
   m_EditorClassIdentifier: 
-  Type: 6
-  Cost: 3
-  RewardCost: 5
-  GrownTime: 5
-  FloweringTime: 5
-  Sprites:
+  type: 6
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
   - {fileID: 4121880872312635667, guid: eaf79d4c19cfdbe41bda364ca03d95de, type: 3}
   - {fileID: 2344270669467322306, guid: eaf79d4c19cfdbe41bda364ca03d95de, type: 3}
   - {fileID: 4308106298786891140, guid: eaf79d4c19cfdbe41bda364ca03d95de, type: 3}
@@ -26,3 +26,4 @@ MonoBehaviour:
   - {fileID: 7043855894265817204, guid: eaf79d4c19cfdbe41bda364ca03d95de, type: 3}
   - {fileID: 3988426822137034836, guid: eaf79d4c19cfdbe41bda364ca03d95de, type: 3}
   - {fileID: -2229105888306426895, guid: eaf79d4c19cfdbe41bda364ca03d95de, type: 3}
+  prefab: {fileID: 5277697769792425466, guid: 87ce928c741eb2d4e98f331c3c63029a, type: 3}

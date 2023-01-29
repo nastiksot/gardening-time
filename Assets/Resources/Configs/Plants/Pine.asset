@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
   m_Name: Pine
   m_EditorClassIdentifier: 
-  Type: 7
-  Cost: 3
-  RewardCost: 5
-  GrownTime: 5
-  FloweringTime: 5
-  Sprites:
+  type: 7
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
   - {fileID: -5265680274069023162, guid: dc6853bbef3866140a650f2ef948461a, type: 3}
   - {fileID: -7743467011714361862, guid: dc6853bbef3866140a650f2ef948461a, type: 3}
   - {fileID: 8597169530912069336, guid: dc6853bbef3866140a650f2ef948461a, type: 3}
@@ -25,3 +25,4 @@ MonoBehaviour:
   - {fileID: 2008354730931198054, guid: dc6853bbef3866140a650f2ef948461a, type: 3}
   - {fileID: 459575006551184890, guid: dc6853bbef3866140a650f2ef948461a, type: 3}
   - {fileID: -2436204277729614453, guid: dc6853bbef3866140a650f2ef948461a, type: 3}
+  prefab: {fileID: 9010642917473392592, guid: 0b152b428b101214c9ab923224c32b89, type: 3}

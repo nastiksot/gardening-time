@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
   m_Name: Radish
   m_EditorClassIdentifier: 
-  Type: 10
-  Cost: 3
-  RewardCost: 5
-  GrownTime: 5
-  FloweringTime: 5
-  Sprites:
+  type: 10
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
   - {fileID: -3817150301677934754, guid: 80449370a7c7e3a4ba3b37a323264904, type: 3}
   - {fileID: 8187334987387773626, guid: 80449370a7c7e3a4ba3b37a323264904, type: 3}
   - {fileID: -3966157471903116696, guid: 80449370a7c7e3a4ba3b37a323264904, type: 3}
@@ -25,3 +25,4 @@ MonoBehaviour:
   - {fileID: -3722681414152929213, guid: 80449370a7c7e3a4ba3b37a323264904, type: 3}
   - {fileID: 1604178996401729479, guid: 80449370a7c7e3a4ba3b37a323264904, type: 3}
   - {fileID: -5313430417615011077, guid: 80449370a7c7e3a4ba3b37a323264904, type: 3}
+  prefab: {fileID: 3453174563681797336, guid: 4de8511acc35455469fb67989ba707c9, type: 3}

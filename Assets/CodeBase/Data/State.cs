@@ -8,7 +8,7 @@ namespace CodeBase.Data
     public class State
     {
         public int coins;
-        public List<Plant> inventoryPlants = new List<Plant>();
+        public List<PlantData> inventoryPlants = new List<PlantData>();
 
         public State()
         {

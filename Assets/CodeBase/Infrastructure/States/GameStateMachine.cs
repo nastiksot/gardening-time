@@ -9,12 +9,12 @@ namespace CodeBase.Infrastructure
 {
     public class GameStateMachine
     {
-        private readonly Dictionary<Type, IExitableState> _states;
-        private IExitableState _currentState;
+        readonly Dictionary<Type, IExitableState> m_States;
+        IExitableState m_CurrentState;
 
         public GameStateMachine(SceneLoader sceneLoader, LoadingCanvas loadingCanvas, ServiceLocator serviceLocator)
         {
-            _states = new Dictionary<Type, IExitableState>
+            m_States = new Dictionary<Type, IExitableState>
             {
                 [typeof(BootStrapState)] = new BootStrapState(this, sceneLoader, serviceLocator),
 
@@ -46,17 +46,17 @@ namespace CodeBase.Infrastructure
         {
         }
 
-        private TState GetState<TState>() where TState : class, IExitableState
+        TState GetState<TState>() where TState : class, IExitableState
         {
-            return _states[typeof(TState)] as TState;
+            return m_States[typeof(TState)] as TState;
         }
 
-        private TState ChangeState<TState>() where TState : class, IExitableState
+        TState ChangeState<TState>() where TState : class, IExitableState
         {
-            _currentState?.Exit();
+            m_CurrentState?.Exit();
 
             var state = GetState<TState>();
-            _currentState = state;
+            m_CurrentState = state;
 
             return state;
         }

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
   m_Name: Spruce
   m_EditorClassIdentifier: 
-  Type: 4
-  Cost: 3
-  RewardCost: 5
-  GrownTime: 5
-  FloweringTime: 5
-  Sprites:
+  type: 4
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
   - {fileID: 3549203890467312553, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
   - {fileID: 3579539810297671808, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
   - {fileID: 6860661994336155712, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
@@ -26,3 +26,4 @@ MonoBehaviour:
   - {fileID: 6513007287316010202, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
   - {fileID: 730205646541710128, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
   - {fileID: 1709968606801807160, guid: 09ed773b08a550e41b137772eb02f87b, type: 3}
+  prefab: {fileID: 7308127804505280060, guid: 18218fb1b3b0e544b863b335dc58fa48, type: 3}

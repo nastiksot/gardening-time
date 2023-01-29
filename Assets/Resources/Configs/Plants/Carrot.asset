@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
   m_Name: Carrot
   m_EditorClassIdentifier: 
-  Type: 5
-  Cost: 3
-  RewardCost: 5
-  GrownTime: 5
-  FloweringTime: 5
-  Sprites:
+  type: 5
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
   - {fileID: 3928329487851121431, guid: 42d4770211adda24baafdb7629f89305, type: 3}
   - {fileID: -5859083586626064994, guid: 42d4770211adda24baafdb7629f89305, type: 3}
   - {fileID: -2094157912208876536, guid: 42d4770211adda24baafdb7629f89305, type: 3}
@@ -25,3 +25,4 @@ MonoBehaviour:
   - {fileID: 3721053832486967156, guid: 42d4770211adda24baafdb7629f89305, type: 3}
   - {fileID: -3855089239954288668, guid: 42d4770211adda24baafdb7629f89305, type: 3}
   - {fileID: 1746509244472477445, guid: 42d4770211adda24baafdb7629f89305, type: 3}
+  prefab: {fileID: 5242793356369175218, guid: 5df77d767adc31747adf20f36701616f, type: 3}

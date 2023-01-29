@@ -2,7 +2,7 @@
 {
     public class ServiceLocator
     {
-        private static ServiceLocator _instance;
+        static ServiceLocator _instance;
         public static ServiceLocator Container => _instance ?? (_instance = new ServiceLocator());
 
         public void RegisterSingle<TService>(TService implementation)
@@ -15,7 +15,7 @@
             return Implementation<TService>.ServiceInstance;
         }
 
-        private static class Implementation<TService>
+        static class Implementation<TService>
         {
             public static TService ServiceInstance;
         }

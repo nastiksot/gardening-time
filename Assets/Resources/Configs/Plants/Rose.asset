@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
   m_Name: Rose
   m_EditorClassIdentifier: 
-  Type: 11
-  Cost: 3
-  RewardCost: 5
-  GrownTime: 5
-  FloweringTime: 5
-  Sprites:
+  type: 11
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
   - {fileID: 5614637178320563061, guid: 4c66baf94a03393459e93ddcd84eb869, type: 3}
   - {fileID: 5910984749590454971, guid: 4c66baf94a03393459e93ddcd84eb869, type: 3}
   - {fileID: -2326384682445370838, guid: 4c66baf94a03393459e93ddcd84eb869, type: 3}
   - {fileID: -2486830211712430900, guid: 4c66baf94a03393459e93ddcd84eb869, type: 3}
   - {fileID: -8867381439413725629, guid: 4c66baf94a03393459e93ddcd84eb869, type: 3}
   - {fileID: 8890482793539167604, guid: 4c66baf94a03393459e93ddcd84eb869, type: 3}
+  prefab: {fileID: 2356666764776013453, guid: 14bb5880580063c4799fd726fbfb06dd, type: 3}

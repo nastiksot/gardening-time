@@ -4,14 +4,14 @@ namespace CodeBase.Infrastructure
 {
     public class GameBootstrapper : MonoBehaviour, ICoroutineRunner
     {
-        public LoadingCanvas LoadingCanvasPrefab;
-        private Game _game;
+        public LoadingCanvas loadingCanvasPrefab;
+        Game m_Game;
 
-        private void Awake()
+        void Awake()
         {
-            LoadingCanvas loadingCanvas = Instantiate(LoadingCanvasPrefab);
-            _game = new Game(this, loadingCanvas);
-            _game.StateMachine.Enter<BootStrapState>();
+            LoadingCanvas loadingCanvas = Instantiate(loadingCanvasPrefab);
+            m_Game = new Game(this, loadingCanvas);
+            m_Game.StateMachine.Enter<BootStrapState>();
             DontDestroyOnLoad(this);
         }
     }

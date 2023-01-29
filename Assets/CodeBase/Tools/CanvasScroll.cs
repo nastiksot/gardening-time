@@ -15,10 +15,9 @@ public abstract class CanvasScroll<T> : MonoBehaviour where T : Behaviour
 
     [SerializeField] private protected List<T> scrollContentList = new List<T>();
 
+    int _currentPageIndex;
 
-    private int _currentPageIndex;
-
-    private void ScrollAnimation(List<T> content, float endXPosition, float duration)
+    void ScrollAnimation(List<T> content, float endXPosition, float duration)
     {
         for (var i = 0; i < content.Count; i++)
         {

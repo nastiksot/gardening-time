@@ -4,48 +4,57 @@ using CodeBase.Infrastructure.States;
 using CodeBase.PersistentProgress;
 using CodeBase.PersistentProgress.Services;
 using CodeBase.Services.SaveLoad;
+using CodeBase.Services.StaticData;
 
 namespace CodeBase.Infrastructure
 {
     public class BootStrapState : IState
     {
-        private const string Landing = "Landing";
-        private readonly GameStateMachine _stateMachine;
-        private readonly SceneLoader _sceneLoader;
-        private readonly ServiceLocator _serviceLocator;
+        const string k_Landing = "Landing";
+        readonly GameStateMachine m_StateMachine;
+        readonly SceneLoader m_SceneLoader;
+        readonly ServiceLocator m_ServiceLocator;
 
         public BootStrapState(GameStateMachine stateMachine, SceneLoader sceneLoader, ServiceLocator serviceLocator)
         {
-            _stateMachine = stateMachine;
-            _sceneLoader = sceneLoader;
-            _serviceLocator = serviceLocator;
+            m_StateMachine = stateMachine;
+            m_SceneLoader = sceneLoader;
+            m_ServiceLocator = serviceLocator;
             RegisterServices();
         }
 
         public void Enter()
         {
-            _sceneLoader.Load(Landing, EnterLoadLevel);
+            m_SceneLoader.Load(k_Landing, EnterLoadLevel);
         }
 
-        public void Exit()
+        public void Exit() { }
+
+        void EnterLoadLevel()
         {
+            m_StateMachine.Enter<LoadProgressState>();
         }
 
-        private void EnterLoadLevel()
+        void RegisterServices()
         {
-            _stateMachine.Enter<LoadProgressState>();
+            RegisterStaticDataService();
+
+            m_ServiceLocator.RegisterSingle<IAssetProvider>(new AssetProvider());
+
+            m_ServiceLocator.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
+
+            m_ServiceLocator.RegisterSingle<IGameFactory>(new GameFactory(m_ServiceLocator.Single<IAssetProvider>(),
+                m_ServiceLocator.Single<IStaticDataService>()));
+
+            m_ServiceLocator.RegisterSingle<ISaveLoadService>(new SaveLoadService(
+                m_ServiceLocator.Single<IPersistentProgressService>(), m_ServiceLocator.Single<IGameFactory>()));
         }
 
-        private void RegisterServices()
+        void RegisterStaticDataService()
         {
-            _serviceLocator.RegisterSingle<IAssetProvider>(new AssetProvider());
-
-            _serviceLocator.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
-
-            _serviceLocator.RegisterSingle<IGameFactory>(new GameFactory(_serviceLocator.Single<IAssetProvider>()));
-
-            _serviceLocator.RegisterSingle<ISaveLoadService>(new SaveLoadService(
-                _serviceLocator.Single<IPersistentProgressService>(), _serviceLocator.Single<IGameFactory>()));
+            var staticDataService = new StaticDataService();
+            staticDataService.LoadPlants();
+            m_ServiceLocator.RegisterSingle<IStaticDataService>(staticDataService);
         }
     }
 }

@@ -3,16 +3,16 @@
 namespace CodeBase.Inventory
 {
     [Serializable]
-    public class Plant
+    public class PlantData
     {
         public PlantType type;
         public int count;
 
-        public Plant()
+        public PlantData()
         {
         }
 
-        public Plant(int count, PlantType type)
+        public PlantData(PlantType type, int count)
         {
             this.count = count;
             this.type = type;

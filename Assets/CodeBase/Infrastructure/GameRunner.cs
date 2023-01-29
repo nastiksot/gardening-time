@@ -4,13 +4,13 @@ namespace CodeBase.Infrastructure
 {
     public class GameRunner : MonoBehaviour
     {
-        public GameBootstrapper GameBootstrapperPrefab;
+        public GameBootstrapper gameBootstrapperPrefab;
 
-        private void Awake()
+        void Awake()
         {
             if (!FindObjectOfType<GameBootstrapper>())
             {
-                Instantiate(GameBootstrapperPrefab);
+                Instantiate(gameBootstrapperPrefab);
             }
         }
     }

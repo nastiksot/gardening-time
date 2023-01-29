@@ -12,11 +12,14 @@ public class NamedDisabler : Named<string, BaseObjectDisabler>
 public class CanvasSwitcher : MonoBehaviour
 {
     [SerializeField] protected NamedDisabler[] tableNamedDisabler;
-    [SerializeField] private TMP_Text textField;
-    [SerializeField] private float delayTime;
-    [SerializeField] private bool showFirstOnAwake = true;
+    [SerializeField]
+    TMP_Text textField;
+    [SerializeField]
+    float delayTime;
+    [SerializeField]
+    bool showFirstOnAwake = true;
 
-    private Action<int> _onCanvasSwitched;
+    Action<int> _onCanvasSwitched;
 
     public event Action<int> OnCanvasSwitched
     {
@@ -24,7 +27,7 @@ public class CanvasSwitcher : MonoBehaviour
         remove => _onCanvasSwitched -= value;
     }
 
-    private void Awake()
+    void Awake()
     {
         if (!showFirstOnAwake) return;
         HideAllTables();
@@ -36,29 +39,29 @@ public class CanvasSwitcher : MonoBehaviour
     public void OpenTable(BaseObjectDisabler objectDisabler)
     {
         HideAllTables();
-        var namedGroup = GetNamedGroup(objectDisabler);
+        NamedDisabler namedGroup = GetNamedGroup(objectDisabler);
         if (namedGroup == null) return;
         namedGroup.value.DisplayObject(true);
         SetText(namedGroup);
         _onCanvasSwitched?.Invoke(objectDisabler.GetHashCode());
     }
 
-    private void SetText(NamedDisabler namedGroup)
+    void SetText(NamedDisabler namedGroup)
     {
         if (textField != null)
             textField.text = namedGroup.key;
     }
 
-    private NamedDisabler GetNamedGroup(BaseObjectDisabler objectDisabler)
+    NamedDisabler GetNamedGroup(BaseObjectDisabler objectDisabler)
     {
-        var namedGroup = tableNamedDisabler.FirstOrDefault(n => n.value.GetHashCode() == objectDisabler.GetHashCode());
+        NamedDisabler namedGroup = tableNamedDisabler.FirstOrDefault(n => n.value.GetHashCode() == objectDisabler.GetHashCode());
         return namedGroup;
     }
 
     public void DelayedOpenTable(BaseObjectDisabler objectDisabler)
     {
         HideAllTables();
-        var namedGroup = GetNamedGroup(objectDisabler);
+        NamedDisabler namedGroup = GetNamedGroup(objectDisabler);
         if (namedGroup == null) return;
         SetText(namedGroup);
         _onCanvasSwitched?.Invoke(objectDisabler.GetHashCode());

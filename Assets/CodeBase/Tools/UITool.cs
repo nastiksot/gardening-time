@@ -35,9 +35,9 @@ namespace CodeBase.Tools
 
         public static Vector2 UIClickPosition(Transform transform, Vector3 worldPos)
         {
-            var pos = RectTransformUtility.WorldToScreenPoint(Camera.main, worldPos);
+            Vector2 pos = RectTransformUtility.WorldToScreenPoint(Camera.main, worldPos);
             RectTransformUtility.ScreenPointToWorldPointInRectangle(transform as RectTransform, pos, Camera.main,
-                out var rectanglePos);
+                out Vector3 rectanglePos);
             return rectanglePos;
         }
 

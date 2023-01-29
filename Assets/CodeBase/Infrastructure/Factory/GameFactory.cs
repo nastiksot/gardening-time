@@ -1,19 +1,21 @@
 using System.Collections.Generic;
 using CodeBase.Infrastructure.AssetManagement;
+using CodeBase.Services.StaticData;
 using UnityEngine;
 
 namespace CodeBase.Services.SaveLoad
 {
      public class GameFactory : IGameFactory
     {
-        private readonly IAssetProvider _assets;
+        readonly IAssetProvider m_Assets;
+        readonly IStaticDataService m_StaticDataService;
         public List<ISavedProgressReader> ProgressReaders { get; } = new List<ISavedProgressReader>();
         public List<ISavedProgress> ProgressWriters { get; } = new List<ISavedProgress>();
-        public GameObject HeroGameObject { get; private set; }
 
-        public GameFactory(IAssetProvider assets)
+        public GameFactory(IAssetProvider assets, IStaticDataService staticDataService)
         {
-            _assets = assets;
+            m_Assets = assets;
+            m_StaticDataService = staticDataService;
         }
   
         public void InstantiateHUD()
@@ -21,20 +23,34 @@ namespace CodeBase.Services.SaveLoad
            GameObject hud = InstantiateRegistered(AssetPath.MenuPrefabPath);
         }
 
+        public void InstantiatePlant(PlantType type, Transform parent)
+        {
+            GameObject plantPrefab = m_StaticDataService.ForPlant(type).prefab;
+            GameObject instantiatedPlant = Object.Instantiate(plantPrefab, parent);
+            RegisterProgressWatchers(instantiatedPlant);
+        }
+
         public void Cleanup()
         {
             ProgressReaders.Clear();
             ProgressWriters.Clear();
         }
- 
-        private GameObject InstantiateRegistered(string prefabPath)
+
+        GameObject InstantiateRegistered(string prefabPath, Vector3 position)
         {
-            GameObject instantiate = _assets.Instantiate(prefabPath);
+            GameObject instantiate = m_Assets.Instantiate(prefabPath, position);
+            RegisterProgressWatchers(instantiate);
+            return instantiate;
+        }
+        
+        GameObject InstantiateRegistered(string prefabPath)
+        {
+            GameObject instantiate = m_Assets.Instantiate(prefabPath);
             RegisterProgressWatchers(instantiate);
             return instantiate;
         }
 
-        private void RegisterProgressWatchers(GameObject gameObject)
+        void RegisterProgressWatchers(GameObject gameObject)
         {
             foreach (ISavedProgressReader progressReader in gameObject.GetComponentsInChildren<ISavedProgressReader>())
             {
@@ -42,7 +58,7 @@ namespace CodeBase.Services.SaveLoad
             }
         }
 
-        private void Register(ISavedProgressReader progressReader)
+        public void Register(ISavedProgressReader progressReader)
         {
             if (progressReader is ISavedProgress progress)
             {

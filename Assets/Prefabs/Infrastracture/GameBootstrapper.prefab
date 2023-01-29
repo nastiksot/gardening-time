@@ -43,4 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6755063fa68944cfb372b8a5a255bc31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadingCanvasPrefab: {fileID: 432560871, guid: 584cd97524ead234589f8279b12a8b96, type: 3}
+  loadingCanvasPrefab: {fileID: 432560871, guid: 584cd97524ead234589f8279b12a8b96, type: 3}

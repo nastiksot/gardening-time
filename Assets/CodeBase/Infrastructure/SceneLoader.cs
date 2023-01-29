@@ -1,24 +1,25 @@
 ﻿using System;
 using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace CodeBase.Infrastructure
 {
     public class SceneLoader
     {
-        private readonly ICoroutineRunner _coroutineRunner;
+        readonly ICoroutineRunner m_CoroutineRunner;
 
         public SceneLoader(ICoroutineRunner coroutineRunner)
         {
-            _coroutineRunner = coroutineRunner;
+            m_CoroutineRunner = coroutineRunner;
         }
 
         public void Load(string name, Action onComplete = null)
         {
-            _coroutineRunner.StartCoroutine(LoadSceneRoutine(name, onComplete));
+            m_CoroutineRunner.StartCoroutine(LoadSceneRoutine(name, onComplete));
         }
 
-        private IEnumerator LoadSceneRoutine(string name, Action onComplete = null)
+        IEnumerator LoadSceneRoutine(string name, Action onComplete = null)
         {
             if (SceneManager.GetActiveScene().name == name)
             {
@@ -26,7 +27,7 @@ namespace CodeBase.Infrastructure
                 yield break;
             }
 
-            var waitNextScene = SceneManager.LoadSceneAsync(name);
+            AsyncOperation waitNextScene = SceneManager.LoadSceneAsync(name);
             while (!waitNextScene.isDone)
             {
                 yield return null;

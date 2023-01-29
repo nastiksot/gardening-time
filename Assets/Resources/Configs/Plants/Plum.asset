@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
   m_Name: Plum
   m_EditorClassIdentifier: 
-  Type: 8
-  Cost: 3
-  RewardCost: 5
-  GrownTime: 5
-  FloweringTime: 5
-  Sprites:
+  type: 8
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
   - {fileID: 3366512764809018327, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
   - {fileID: -8415520048504749795, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
   - {fileID: 8719045189030842104, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
@@ -25,3 +25,4 @@ MonoBehaviour:
   - {fileID: 8816229459604964126, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
   - {fileID: 1151544086162445305, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
   - {fileID: 4835470820753011333, guid: 83445affe711f064aa2cb7770d6b8fc4, type: 3}
+  prefab: {fileID: 5203444948094226183, guid: 9e9765add9a1f984a91042d0b7d4d1c9, type: 3}

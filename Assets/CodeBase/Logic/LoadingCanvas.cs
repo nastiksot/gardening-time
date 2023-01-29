@@ -5,9 +5,10 @@ namespace CodeBase.Infrastructure
 {
     public class LoadingCanvas : MonoBehaviour
     {
-        [SerializeField] private CanvasGroup loadingCanvas;
+        [SerializeField]
+        CanvasGroup loadingCanvas;
 
-        private void Awake()
+        void Awake()
         {
             DontDestroyOnLoad(this);
         }

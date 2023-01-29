@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
   m_Name: Cactus
   m_EditorClassIdentifier: 
-  Type: 3
-  Cost: 3
-  RewardCost: 5
-  GrownTime: 5
-  FloweringTime: 5
-  Sprites:
+  type: 3
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
   - {fileID: 7873444928579934181, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
   - {fileID: 4438351552130452648, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
   - {fileID: -8484647995636279456, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
@@ -27,3 +27,4 @@ MonoBehaviour:
   - {fileID: -6977608548097279171, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
   - {fileID: 1742208062423336634, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
   - {fileID: -4182094963593053772, guid: d00164e1f8b95ea4b8885252b00e9565, type: 3}
+  prefab: {fileID: 8627055684474606169, guid: d4acff03af9cb0e4195c3b836ac2135f, type: 3}

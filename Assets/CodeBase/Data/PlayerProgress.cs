@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CodeBase.Data
 {
@@ -6,7 +7,7 @@ namespace CodeBase.Data
     public class PlayerProgress
     {
         public State state;
-
+        public List<MugsData> mugsData = new List<MugsData>();
         public PlayerProgress()
         {
             state = new State();

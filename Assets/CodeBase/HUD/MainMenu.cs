@@ -5,29 +5,33 @@ namespace CodeBase.HUD
 {
     public class MainMenu : MonoBehaviour
     {
-        [SerializeField] private Button closeButton;
-        [SerializeField] private Button marketButton;
-        [SerializeField] private Button inventoryButton;
-        [SerializeField] private CanvasDisabler inventoryCanvasDisabler;
-        [SerializeField] private CanvasDisabler buttonHolderCanvasDisabler;
-        [SerializeField] private CanvasSwitcher canvasSwitcher;
+        [SerializeField]
+        Button closeButton;
+        [SerializeField]
+        Button marketButton;
+        [SerializeField]
+        Button inventoryButton;
+        [SerializeField]
+        CanvasDisabler inventoryCanvasDisabler;
+        [SerializeField]
+        CanvasDisabler buttonHolderCanvasDisabler;
+        [SerializeField]
+        CanvasSwitcher canvasSwitcher;
 
-        private void Awake()
+        void Awake()
         {
             closeButton.onClick.AddListener(CloseInventory);
             inventoryButton.onClick.AddListener(OpenInventory);
         }
 
-        private void OpenInventory()
+        void OpenInventory()
         {
-            buttonHolderCanvasDisabler.DisplayObject(false);
             canvasSwitcher.OpenTable(inventoryCanvasDisabler);
         }
 
-        private void CloseInventory()
+        void CloseInventory()
         {
             canvasSwitcher.OpenTable(buttonHolderCanvasDisabler);
-            buttonHolderCanvasDisabler.DisplayObject(true);
         }
     }
 }

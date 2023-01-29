@@ -3,11 +3,11 @@ namespace CodeBase.Infrastructure.States
 {
     public class GameLoopState : IState
     {
-        private readonly GameStateMachine _gameStateMachine;
+        readonly GameStateMachine m_GameStateMachine;
 
         public GameLoopState(GameStateMachine gameStateMachine)
         {
-            _gameStateMachine = gameStateMachine;
+            m_GameStateMachine = gameStateMachine;
         }
 
         public void Exit()

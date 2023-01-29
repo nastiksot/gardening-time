@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
   m_Name: Beetroot
   m_EditorClassIdentifier: 
-  Type: 1
-  Cost: 3
-  RewardCost: 5
-  GrownTime: 5
-  FloweringTime: 5
-  Sprites:
+  type: 1
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
   - {fileID: -2122261477782967425, guid: 23c4d91ee43071044b5d9e774a2fcb1b, type: 3}
   - {fileID: 758563250068289762, guid: 23c4d91ee43071044b5d9e774a2fcb1b, type: 3}
   - {fileID: 7804225656587267082, guid: 23c4d91ee43071044b5d9e774a2fcb1b, type: 3}
@@ -25,3 +25,4 @@ MonoBehaviour:
   - {fileID: -6847975798899432476, guid: 23c4d91ee43071044b5d9e774a2fcb1b, type: 3}
   - {fileID: -8693008634253531721, guid: 23c4d91ee43071044b5d9e774a2fcb1b, type: 3}
   - {fileID: 1703535211376263217, guid: 23c4d91ee43071044b5d9e774a2fcb1b, type: 3}
+  prefab: {fileID: 7047792288338238951, guid: 6335285b9da116144b922bdd54e02da6, type: 3}

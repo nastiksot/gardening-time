@@ -6,29 +6,29 @@ namespace CodeBase.Services.SaveLoad
 {
     public class SaveLoadService  : ISaveLoadService
     {
-        private readonly IPersistentProgressService _progressService;
-        private readonly IGameFactory _gameFactory;
-        private const string ProgressKey = "Progress";
+        readonly IPersistentProgressService m_ProgressService;
+        readonly IGameFactory m_GameFactory;
+        const string k_ProgressKey = "Progress";
 
         public SaveLoadService(IPersistentProgressService progressService, IGameFactory gameFactory)
         {
-            _progressService = progressService;
-            _gameFactory = gameFactory;
+            m_ProgressService = progressService;
+            m_GameFactory = gameFactory;
         }
 
         public void SaveProgress()
         {
-            foreach (ISavedProgress progressWriters in _gameFactory.ProgressWriters)
+            foreach (ISavedProgress progressWriters in m_GameFactory.ProgressWriters)
             {
-                progressWriters.UpdateProgress(_progressService.Progress);
+                progressWriters.UpdateProgress(m_ProgressService.Progress);
             }
 
-            PlayerPrefs.SetString(ProgressKey, _progressService.Progress.Serialize());
+            PlayerPrefs.SetString(k_ProgressKey, m_ProgressService.Progress.Serialize());
         }
 
         public PlayerProgress LoadProgress()
         {
-            return PlayerPrefs.GetString(ProgressKey)?.ToDeserialized<PlayerProgress>();
+            return PlayerPrefs.GetString(k_ProgressKey)?.ToDeserialized<PlayerProgress>();
         }
     }
 }

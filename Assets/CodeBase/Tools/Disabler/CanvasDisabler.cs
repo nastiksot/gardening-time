@@ -6,10 +6,11 @@ using UnityEngine;
 [RequireComponent(typeof(CanvasGroup))]
 public class CanvasDisabler : BaseObjectDisabler
 {
-    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField]
+    CanvasGroup canvasGroup;
 
-    private Action<float> onAlphaChange;
-    private Action<bool> onInteractableChange;
+    Action<float> onAlphaChange;
+    Action<bool> onInteractableChange;
 
     public CanvasGroup CanvasGroup => canvasGroup;
 
@@ -35,7 +36,7 @@ public class CanvasDisabler : BaseObjectDisabler
         get => canvasGroup.interactable;
     }
 
-    private void OnValidate()
+    void OnValidate()
     {
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
     }

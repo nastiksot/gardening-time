@@ -1,5 +1,5 @@
-﻿using CodeBase.Data;
-using CodeBase.PersistentProgress.Services;
+﻿using CodeBase.PersistentProgress.Services;
+using CodeBase.Room;
 using CodeBase.Services.SaveLoad;
 using UnityEngine;
 
@@ -7,54 +7,57 @@ namespace CodeBase.Infrastructure.States
 {
     public class LoadLevelState : IPayloadedState<string>
     {
-        private const string InitialPoint = "InitialPoint";
-
-        private readonly GameStateMachine _stateMachine;
-        private readonly SceneLoader _sceneLoader;
-        private readonly LoadingCanvas _loadingCanvas;
-        private readonly IGameFactory _gameFactory;
-        private readonly IPersistentProgressService _progressService;
+        readonly GameStateMachine m_StateMachine;
+        readonly SceneLoader m_SceneLoader;
+        readonly LoadingCanvas m_LoadingCanvas;
+        readonly IGameFactory m_GameFactory;
+        readonly IPersistentProgressService m_ProgressService;
 
         public LoadLevelState(GameStateMachine stateMachine, SceneLoader sceneLoader, LoadingCanvas loadingCanvas,
             IGameFactory gameFactory, IPersistentProgressService progressService)
         {
-            _stateMachine = stateMachine;
-            _sceneLoader = sceneLoader;
-            _loadingCanvas = loadingCanvas;
-            _gameFactory = gameFactory;
-            _progressService = progressService;
+            m_StateMachine = stateMachine;
+            m_SceneLoader = sceneLoader;
+            m_LoadingCanvas = loadingCanvas;
+            m_GameFactory = gameFactory;
+            m_ProgressService = progressService;
         }
 
         public void Enter(string payload)
         {
-            _loadingCanvas.Show();
-            _gameFactory.Cleanup();
-            _sceneLoader.Load(payload, OnLoadedScene);
+            m_LoadingCanvas.Show();
+            m_GameFactory.Cleanup();
+            m_SceneLoader.Load(payload, OnLoadedScene);
         }
 
-        private void OnLoadedScene()
+        void OnLoadedScene()
         {
             InitGameWorld();
             InformProgressReaders();
-            _stateMachine.Enter<GameLoopState>();
+            m_StateMachine.Enter<GameLoopState>();
         }
 
-        private void InformProgressReaders()
+        void InformProgressReaders()
         {
-            foreach (ISavedProgressReader progressReader in _gameFactory.ProgressReaders)
+            foreach (ISavedProgressReader progressReader in m_GameFactory.ProgressReaders)
             {
-                progressReader.LoadProgress(_progressService.Progress);
+                progressReader.LoadProgress(m_ProgressService.Progress);
             }
         }
 
-        private void InitGameWorld()
-        { 
-            _gameFactory.InstantiateHUD(); 
+        void InitGameWorld()
+        {
+            m_GameFactory.InstantiateHUD();
+            var mugPlace = GameObject.FindGameObjectsWithTag("MugPlace");
+            foreach (GameObject gameObject in mugPlace)
+            {
+                m_GameFactory.Register(gameObject.GetComponent<MugPlaceholder>());
+            }
         }
 
         public void Exit()
         {
-            _loadingCanvas.Hide();
+            m_LoadingCanvas.Hide();
         }
     }
 }

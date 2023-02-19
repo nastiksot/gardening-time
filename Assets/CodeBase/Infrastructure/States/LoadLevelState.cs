@@ -48,10 +48,11 @@ namespace CodeBase.Infrastructure.States
         void InitGameWorld()
         {
             m_GameFactory.InstantiateHUD();
+            //TODO: add factory for mugsPlace
             var mugPlace = GameObject.FindGameObjectsWithTag("MugPlace");
             foreach (GameObject gameObject in mugPlace)
             {
-                m_GameFactory.Register(gameObject.GetComponent<MugPlaceholder>());
+                m_GameFactory.Register(gameObject.GetComponent<Mug>());
             }
         }
 

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
+  m_Name: Sunny
+  m_EditorClassIdentifier: 
+  type: 12
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
+  - {fileID: 375496327, guid: 32251692db108bd40b7df049c60d2f3f, type: 3}
+  - {fileID: 1818090994, guid: 32251692db108bd40b7df049c60d2f3f, type: 3}
+  - {fileID: 277647165, guid: 32251692db108bd40b7df049c60d2f3f, type: 3}
+  - {fileID: -298893574, guid: 32251692db108bd40b7df049c60d2f3f, type: 3}
+  - {fileID: -1496864900, guid: 32251692db108bd40b7df049c60d2f3f, type: 3}
+  - {fileID: 54869928, guid: 32251692db108bd40b7df049c60d2f3f, type: 3}
+  prefab: {fileID: 7308127804505280060, guid: da4876d45c0fc374299ae6a7b897dae5, type: 3}

@@ -11,7 +11,7 @@ namespace CodeBase.Data
 
         public static Vector3 AsUnityVector(this Vector3Data vector3Data)
         {
-            return new Vector3(vector3Data.X, vector3Data.Y, vector3Data.Z);
+            return new Vector3(vector3Data.x, vector3Data.y, vector3Data.z);
         }
 
         public static Vector3 AddY(this Vector3 vector3, float y)

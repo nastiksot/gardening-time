@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using CodeBase.Infrastructure.Event;
+using CodeBase.Infrastructure.Event.Events;
+using CodeBase.Infrastructure.Services;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace CodeBase.HUD
@@ -18,10 +21,28 @@ namespace CodeBase.HUD
         [SerializeField]
         CanvasSwitcher canvasSwitcher;
 
+        IEventsService m_EventsService;
+        
         void Awake()
+        {
+            m_EventsService = ServiceLocator.Container.Single<IEventsService>();
+        }
+
+        void Start()
         {
             closeButton.onClick.AddListener(CloseInventory);
             inventoryButton.onClick.AddListener(OpenInventory);
+            m_EventsService.Subscribe<OnPlantSeedSelected>(OnPlantSeedSelected);
+        }
+
+        void OnDestroy()
+        {
+            m_EventsService.Unsubscribe<OnPlantSeedSelected>(OnPlantSeedSelected);
+        }
+
+        void OnPlantSeedSelected(OnPlantSeedSelected _)
+        {
+            CloseInventory();
         }
 
         void OpenInventory()

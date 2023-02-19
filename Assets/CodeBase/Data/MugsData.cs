@@ -1,5 +1,4 @@
 using System;
-using CodeBase.Inventory; 
 
 namespace CodeBase.Data
 {

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace CodeBase.Services.SaveLoad
 {
-     public class GameFactory : IGameFactory
+    public class GameFactory : IGameFactory
     {
         readonly IAssetProvider m_Assets;
         readonly IStaticDataService m_StaticDataService;
@@ -17,17 +17,24 @@ namespace CodeBase.Services.SaveLoad
             m_Assets = assets;
             m_StaticDataService = staticDataService;
         }
-  
+
         public void InstantiateHUD()
         {
-           GameObject hud = InstantiateRegistered(AssetPath.MenuPrefabPath);
+            GameObject hud = InstantiateRegistered(AssetPath.MenuCanvasPath);
         }
 
-        public void InstantiatePlant(PlantType type, Transform parent)
+        public void InstantiateGameplay()
+        {
+            GameObject hud = InstantiateRegistered(AssetPath.GameplayCanvasPath);
+        }
+
+        public GameObject InstantiatePlant(PlantType type, Transform parent)
         {
             GameObject plantPrefab = m_StaticDataService.ForPlant(type).prefab;
             GameObject instantiatedPlant = Object.Instantiate(plantPrefab, parent);
+            
             RegisterProgressWatchers(instantiatedPlant);
+            return instantiatedPlant;
         }
 
         public void Cleanup()
@@ -42,7 +49,7 @@ namespace CodeBase.Services.SaveLoad
             RegisterProgressWatchers(instantiate);
             return instantiate;
         }
-        
+
         GameObject InstantiateRegistered(string prefabPath)
         {
             GameObject instantiate = m_Assets.Instantiate(prefabPath);

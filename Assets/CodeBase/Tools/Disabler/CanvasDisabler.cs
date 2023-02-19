@@ -9,21 +9,21 @@ public class CanvasDisabler : BaseObjectDisabler
     [SerializeField]
     CanvasGroup canvasGroup;
 
-    Action<float> onAlphaChange;
-    Action<bool> onInteractableChange;
+    Action<float> m_OnAlphaChange;
+    Action<bool> m_OnInteractableChange;
 
     public CanvasGroup CanvasGroup => canvasGroup;
 
     public event Action<bool> OnInteractableChange
     {
-        add => onInteractableChange += value;
-        remove => onInteractableChange -= value;
+        add => m_OnInteractableChange += value;
+        remove => m_OnInteractableChange -= value;
     }
 
     public event Action<float> OnAlphaChange
     {
-        add => onAlphaChange += value;
-        remove => onAlphaChange -= value;
+        add => m_OnAlphaChange += value;
+        remove => m_OnAlphaChange -= value;
     }
 
     public float Alpha
@@ -44,14 +44,14 @@ public class CanvasDisabler : BaseObjectDisabler
     public override void DisplayObject(bool state)
     {
         UITool.State(ref canvasGroup, state);
-        onAlphaChange?.Invoke(canvasGroup.alpha);
-        onInteractableChange?.Invoke(state);
+        m_OnAlphaChange?.Invoke(canvasGroup.alpha);
+        m_OnInteractableChange?.Invoke(state);
     }
 
     public override IEnumerator DisplayObject(bool isVisible, float delay, Action<BaseObjectDisabler> action = null)
     {
-        onAlphaChange?.Invoke(isVisible ? 1 : 0);
-        onInteractableChange?.Invoke(isVisible);
+        m_OnAlphaChange?.Invoke(isVisible ? 1 : 0);
+        m_OnInteractableChange?.Invoke(isVisible);
         yield return UITool.State(canvasGroup, isVisible, delay, group => action?.Invoke(this));
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,16 +8,32 @@ namespace CodeBase.Inventory
     {
         [SerializeField]
         InventoryItem inventoryItemPrefab;
-        readonly List<InventoryItem> m_InventoryItems = new List<InventoryItem>();
         const int k_MaxItemValue = 6;
-        
-        public bool TryAdd(Sprite sprite, string itemName, int countItem)
+        public bool IsFull => InventoryItems.Count >= k_MaxItemValue;
+        public readonly List<InventoryItem> InventoryItems = new List<InventoryItem>();
+        public event Action<InventoryPage> OnDestroyPage;
+
+        public void Add(PlantsConfig plantsConfig, int plantCount)
         {
-            if (m_InventoryItems.Count >= k_MaxItemValue) return false;
             InventoryItem item = Instantiate(inventoryItemPrefab, transform);
-            m_InventoryItems.Add(item);
-            item.Initialize(sprite, itemName, countItem);
-            return true;
+            InventoryItems.Add(item);
+            item.Initialize(plantsConfig, plantCount);
+            item.OnDestroyItem += RemoveItem;
+        }
+
+        void RemoveItem(InventoryItem item)
+        {
+            InventoryItems.Remove(item);
+            if (InventoryItems.Count == 0)
+            {
+                DestroyPage();
+            }
+        }
+
+        void DestroyPage()
+        {
+            OnDestroyPage?.Invoke(this);
+            Destroy(gameObject);
         }
     }
 }

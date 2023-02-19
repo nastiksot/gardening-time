@@ -2,8 +2,8 @@
 {
     public class ServiceLocator
     {
-        static ServiceLocator _instance;
-        public static ServiceLocator Container => _instance ?? (_instance = new ServiceLocator());
+        static ServiceLocator s_Instance;
+        public static ServiceLocator Container => s_Instance ?? (s_Instance = new ServiceLocator());
 
         public void RegisterSingle<TService>(TService implementation)
         {

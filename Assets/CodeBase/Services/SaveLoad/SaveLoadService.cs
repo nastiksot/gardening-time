@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CodeBase.Services.SaveLoad
 {
-    public class SaveLoadService  : ISaveLoadService
+    public class SaveLoadService : ISaveLoadService
     {
         readonly IPersistentProgressService m_ProgressService;
         readonly IGameFactory m_GameFactory;

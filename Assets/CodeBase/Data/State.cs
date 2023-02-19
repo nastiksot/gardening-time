@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using CodeBase.Inventory;
 
 namespace CodeBase.Data
 {

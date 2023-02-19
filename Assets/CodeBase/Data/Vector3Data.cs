@@ -1,19 +1,23 @@
 using System;
+using UnityEngine.Serialization;
 
 namespace CodeBase.Data
 {
     [Serializable]
     public class Vector3Data
     {
-        public float X;
-        public float Y;
-        public float Z;
+        [FormerlySerializedAs("X")]
+        public float x;
+        [FormerlySerializedAs("Y")]
+        public float y;
+        [FormerlySerializedAs("Z")]
+        public float z;
 
         public Vector3Data(float x, float y, float z)
         {
-            X = x;
-            Y = y;
-            Z = z;
+            this.x = x;
+            this.y = y;
+            this.z = z;
         }
     }
 }

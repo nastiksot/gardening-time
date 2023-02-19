@@ -1,7 +1,7 @@
 ﻿using CodeBase.Infrastructure.AssetManagement;
+using CodeBase.Infrastructure.Event;
 using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.States;
-using CodeBase.PersistentProgress;
 using CodeBase.PersistentProgress.Services;
 using CodeBase.Services.SaveLoad;
 using CodeBase.Services.StaticData;
@@ -38,6 +38,8 @@ namespace CodeBase.Infrastructure
         void RegisterServices()
         {
             RegisterStaticDataService();
+
+            m_ServiceLocator.RegisterSingle<IEventsService>(new EventsService());
 
             m_ServiceLocator.RegisterSingle<IAssetProvider>(new AssetProvider());
 

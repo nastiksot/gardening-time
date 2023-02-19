@@ -19,12 +19,12 @@ public class CanvasSwitcher : MonoBehaviour
     [SerializeField]
     bool showFirstOnAwake = true;
 
-    Action<int> _onCanvasSwitched;
+    Action<int> m_OnCanvasSwitched;
 
     public event Action<int> OnCanvasSwitched
     {
-        add => _onCanvasSwitched += value;
-        remove => _onCanvasSwitched -= value;
+        add => m_OnCanvasSwitched += value;
+        remove => m_OnCanvasSwitched -= value;
     }
 
     void Awake()
@@ -43,7 +43,7 @@ public class CanvasSwitcher : MonoBehaviour
         if (namedGroup == null) return;
         namedGroup.value.DisplayObject(true);
         SetText(namedGroup);
-        _onCanvasSwitched?.Invoke(objectDisabler.GetHashCode());
+        m_OnCanvasSwitched?.Invoke(objectDisabler.GetHashCode());
     }
 
     void SetText(NamedDisabler namedGroup)
@@ -64,7 +64,7 @@ public class CanvasSwitcher : MonoBehaviour
         NamedDisabler namedGroup = GetNamedGroup(objectDisabler);
         if (namedGroup == null) return;
         SetText(namedGroup);
-        _onCanvasSwitched?.Invoke(objectDisabler.GetHashCode());
+        m_OnCanvasSwitched?.Invoke(objectDisabler.GetHashCode());
         StartCoroutine(namedGroup.value.DisplayObject(true, delayTime, (canvas) => { namedGroup.value = canvas; }));
     }
 

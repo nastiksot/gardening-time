@@ -1,5 +1,4 @@
 ﻿using CodeBase.Data;
-using CodeBase.Inventory;
 using CodeBase.PersistentProgress.Services;
 using CodeBase.Services.SaveLoad;
 
@@ -38,14 +37,20 @@ namespace CodeBase.Infrastructure.States
         PlayerProgress NewProgress()
         {
             var progress = new PlayerProgress(state: new State(coins: 0));
-            progress.state.inventoryPlants.Add(new PlantData(type: PlantType.Apple, count: 1));
-            progress.state.inventoryPlants.Add(new PlantData(type: PlantType.Rose, count: 1));
-            progress.state.inventoryPlants.Add(new PlantData(type: PlantType.Cactus, count: 1));
-            progress.state.inventoryPlants.Add(new PlantData(type: PlantType.Bonsai, count: 1));
-            progress.state.inventoryPlants.Add(new PlantData(type: PlantType.Pumpkin, count: 1));
-            progress.state.inventoryPlants.Add(new PlantData(type: PlantType.Orange, count: 1));
-            progress.state.inventoryPlants.Add(new PlantData(type: PlantType.Plum, count: 1));
-            progress.mugsData.Add(new MugsData(guid: "Game_1d07a76a-b413-4cdb-8835-f3679f7e2d3f", plantData: new PlantData(count: 1, type: PlantType.Orange)));
+            progress.state.inventoryPlants.Add(new PlantData(type: 0, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 1, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type:2, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 3, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 4, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 5, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 6, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 7, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 8, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 9, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 10, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 11, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 12, count: 1)); 
+            progress.state.inventoryPlants.Add(new PlantData(type: 13, count: 1)); 
             return progress;
         }
     }

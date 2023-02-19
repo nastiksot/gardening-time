@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60227bf4379e9e42b5020f6bdc8724e, type: 3}
+  m_Name: Toothy
+  m_EditorClassIdentifier: 
+  type: 13
+  cost: 0
+  rewardCost: 0
+  grownTime: 0
+  floweringTime: 0
+  sprites:
+  - {fileID: -791042586, guid: 4bf4f33912859a743a50dfdfdbc7c4c2, type: 3}
+  - {fileID: -2107723408, guid: 4bf4f33912859a743a50dfdfdbc7c4c2, type: 3}
+  - {fileID: -4534678, guid: 4bf4f33912859a743a50dfdfdbc7c4c2, type: 3}
+  - {fileID: 339907197, guid: 4bf4f33912859a743a50dfdfdbc7c4c2, type: 3}
+  - {fileID: 1878887301, guid: 4bf4f33912859a743a50dfdfdbc7c4c2, type: 3}
+  - {fileID: 1477981403, guid: 4bf4f33912859a743a50dfdfdbc7c4c2, type: 3}
+  - {fileID: 765037064, guid: 4bf4f33912859a743a50dfdfdbc7c4c2, type: 3}
+  prefab: {fileID: 7308127804505280060, guid: 9a34f3614811a0a4cbd9ee07e1dc283c, type: 3}

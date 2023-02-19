@@ -13,4 +13,6 @@
     Pumpkin = 9,
     Radish = 10,
     Rose = 11,
+    Sunny = 12,
+    Toothy = 13,
 }

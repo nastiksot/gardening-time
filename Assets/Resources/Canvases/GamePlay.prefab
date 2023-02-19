@@ -1223,8 +1223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -79.4, y: 27.994995}
-  m_SizeDelta: {x: 256, y: 256}
+  m_AnchoredPosition: {x: -80, y: -35}
+  m_SizeDelta: {x: 131.95, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &992378559
 CanvasRenderer:
@@ -1254,7 +1254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4d9e6ea324d3ec942a1d89f5d2cc8ad0, type: 3}
+  m_Sprite: {fileID: -2097613444, guid: 4882002a0fa4cc049b95759ba58d1168, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2864,9 +2864,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lamp: {fileID: 1370798943}
   frogImage: {fileID: 1488501857}
+  lampImage: {fileID: 992378558}
   frogSprites:
   - {fileID: -1762659090, guid: 8b86b538bff8957439ff10257f70f603, type: 3}
   - {fileID: -835865485, guid: 8b86b538bff8957439ff10257f70f603, type: 3}
+  lampSprites:
+  - {fileID: -2097613444, guid: 4882002a0fa4cc049b95759ba58d1168, type: 3}
+  - {fileID: 837245923, guid: 4882002a0fa4cc049b95759ba58d1168, type: 3}
 --- !u!1 &226039946333007626
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,11 @@ namespace CodeBase.HUD.InteractiveUI
         [SerializeField]
         Image frogImage;
         [SerializeField]
+        Image lampImage;
+        [SerializeField]
         Sprite[] frogSprites;
+        [SerializeField]
+        Sprite[] lampSprites;
 
         void Awake()
         {
@@ -20,6 +24,7 @@ namespace CodeBase.HUD.InteractiveUI
 
         void SwitchLight(bool isOn)
         {
+            lampImage.sprite = isOn ? lampSprites[1] : lampSprites[0];
             frogImage.sprite = isOn ? frogSprites[1] : frogSprites[0];
         }
     }

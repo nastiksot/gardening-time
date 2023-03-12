@@ -15,8 +15,8 @@ MonoBehaviour:
   type: 2
   cost: 0
   rewardCost: 0
-  grownTime: 0
-  floweringTime: 0
+  grownTime: 20
+  floweringTime: 12
   sprites:
   - {fileID: -1495734539988488806, guid: 6e21d3a150d968248878114d94978a40, type: 3}
   - {fileID: 8714690033471101085, guid: 6e21d3a150d968248878114d94978a40, type: 3}
@@ -25,5 +25,4 @@ MonoBehaviour:
   - {fileID: 7772140429533559404, guid: 6e21d3a150d968248878114d94978a40, type: 3}
   - {fileID: -6743019838493104742, guid: 6e21d3a150d968248878114d94978a40, type: 3}
   - {fileID: -1809045173199058153, guid: 6e21d3a150d968248878114d94978a40, type: 3}
-  - {fileID: -25574621894855714, guid: 6e21d3a150d968248878114d94978a40, type: 3}
   prefab: {fileID: 1614609491792965665, guid: b3f6b7d3da0c46640aae1b98aebc630d, type: 3}

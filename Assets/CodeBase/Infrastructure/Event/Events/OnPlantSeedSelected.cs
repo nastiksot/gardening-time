@@ -4,6 +4,6 @@ namespace CodeBase.Infrastructure.Event.Events
 {
     public class OnPlantSeedSelected : IEvent
     {
-        public PlantsConfig PlantsConfig { get; set; }
+        public PlantConfig PlantConfig { get; set; }
     }
 }

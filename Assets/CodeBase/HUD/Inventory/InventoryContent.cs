@@ -51,8 +51,8 @@ namespace CodeBase.Inventory
             List<PlantData> inventoryPlants = progress.state.inventoryPlants;
             for (var i = 0; i < inventoryPlants.Count; i++)
             {
-                PlantsConfig plantsConfig = m_StaticDataService.ForPlant(inventoryPlants[i].type);
-                if (plantsConfig == null) continue;
+                PlantConfig plantConfig = m_StaticDataService.ForPlant(inventoryPlants[i].type);
+                if (plantConfig == null) continue;
                 int plantCount = inventoryPlants[i].count;
 
                 List<InventoryPage> emptyPages = new List<InventoryPage>();
@@ -67,7 +67,7 @@ namespace CodeBase.Inventory
                 }
 
                 InventoryPage inventoryPage = emptyPages.Count == 0 ? InstantiateInventoryPage() : emptyPages.First();
-                inventoryPage.Add(plantsConfig, plantCount);
+                inventoryPage.Add(plantConfig, plantCount);
             }
         }
 

@@ -2,7 +2,7 @@ namespace CodeBase.Services.StaticData
 {
     public interface IStaticDataService
     {
-        void LoadPlants();
-        PlantsConfig ForPlant(PlantType plantType);
+        PictureConfig[] PictureConfigs { get; }
+        PlantConfig ForPlant(PlantType plantType);
     }
 }

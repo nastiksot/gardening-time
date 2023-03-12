@@ -13,11 +13,11 @@ namespace CodeBase.Inventory
         public readonly List<InventoryItem> InventoryItems = new List<InventoryItem>();
         public event Action<InventoryPage> OnDestroyPage;
 
-        public void Add(PlantsConfig plantsConfig, int plantCount)
+        public void Add(PlantConfig plantConfig, int plantCount)
         {
             InventoryItem item = Instantiate(inventoryItemPrefab, transform);
             InventoryItems.Add(item);
-            item.Initialize(plantsConfig, plantCount);
+            item.Initialize(plantConfig, plantCount);
             item.OnDestroyItem += RemoveItem;
         }
 

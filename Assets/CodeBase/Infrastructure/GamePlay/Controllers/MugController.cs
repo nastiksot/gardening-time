@@ -14,7 +14,7 @@ namespace CodeBase.Infrastructure.GamePlay.Controllers
 
         IEventsService m_EventsService;
         ISaveLoadService m_SaveLoadService;
-        PlantsConfig m_CurrentPlantConfig;
+        PlantConfig m_CurrentPlantConfig;
 
         void Awake()
         {
@@ -51,7 +51,7 @@ namespace CodeBase.Infrastructure.GamePlay.Controllers
 
         void OnPlantSelected(OnPlantSeedSelected evt)
         {
-            m_CurrentPlantConfig = evt.PlantsConfig;
+            m_CurrentPlantConfig = evt.PlantConfig;
             //TODO: initialize cancel button 
         }
 

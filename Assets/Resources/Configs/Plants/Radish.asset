@@ -15,8 +15,8 @@ MonoBehaviour:
   type: 10
   cost: 0
   rewardCost: 0
-  grownTime: 0
-  floweringTime: 0
+  grownTime: 20
+  floweringTime: 10
   sprites:
   - {fileID: -3817150301677934754, guid: 80449370a7c7e3a4ba3b37a323264904, type: 3}
   - {fileID: 8187334987387773626, guid: 80449370a7c7e3a4ba3b37a323264904, type: 3}

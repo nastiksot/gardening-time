@@ -7,15 +7,26 @@ namespace CodeBase.Services.StaticData
 {
     public class StaticDataService : IStaticDataService
     {
-        Dictionary<PlantType, PlantsConfig> m_PlantsConfigs = new Dictionary<PlantType, PlantsConfig>();
+        Dictionary<PlantType, PlantConfig> m_PlantsConfigs = new Dictionary<PlantType, PlantConfig>();
+        public PictureConfig[] PictureConfigs { get; private set; }
 
-        public void LoadPlants() => 
-            m_PlantsConfigs = Resources.LoadAll<PlantsConfig>(AssetPath.PlantsStaticDataPath)
+        public void LoadAll()
+        {
+            LoadPlants();
+            LoadPictures();
+        }
+
+        public void LoadPlants() =>
+            m_PlantsConfigs = Resources.LoadAll<PlantConfig>(AssetPath.PlantsStaticDataPath)
                 .ToDictionary(x => x.type);
 
-        public PlantsConfig ForPlant(PlantType plantType) => 
-            m_PlantsConfigs.TryGetValue(plantType, out PlantsConfig plantsConfig) 
-                ? plantsConfig 
+        public void LoadPictures() =>
+            PictureConfigs = Resources.LoadAll<PictureConfig>(AssetPath.PictureStaticDataPath)
+                .ToArray();
+
+        public PlantConfig ForPlant(PlantType plantType) =>
+            m_PlantsConfigs.TryGetValue(plantType, out PlantConfig plantsConfig)
+                ? plantsConfig
                 : null;
     }
 }

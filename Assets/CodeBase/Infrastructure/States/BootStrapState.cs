@@ -55,7 +55,7 @@ namespace CodeBase.Infrastructure
         void RegisterStaticDataService()
         {
             var staticDataService = new StaticDataService();
-            staticDataService.LoadPlants();
+            staticDataService.LoadAll();
             m_ServiceLocator.RegisterSingle<IStaticDataService>(staticDataService);
         }
     }

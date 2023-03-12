@@ -1,4 +1,5 @@
-using System.Threading.Tasks;
+using System;
+using System.Collections;
 using CodeBase.Infrastructure.Services;
 using CodeBase.Services.StaticData;
 using UnityEngine;
@@ -10,41 +11,80 @@ namespace CodeBase.Room
     {
         [SerializeField]
         Image image;
-        bool m_IsPlaying;
+        [SerializeField]
+        ResourceBar resourceBar;
 
-        PlantsConfig m_PlantsConfig;
+        float m_TimePerFrame;
+        int m_SpriteLenght;
+        int m_GrownIteration;
+
+        PlantConfig m_PlantConfig;
         IStaticDataService m_StaticDataService;
-        public Sprite[] PlantSprites => m_PlantsConfig.sprites;
-        public PlantType PlantType => m_PlantsConfig.type;
+
+        public Sprite[] PlantSprites => m_PlantConfig.sprites;
+        public PlantType PlantType => m_PlantConfig.type;
 
         void Awake()
         {
             m_StaticDataService = ServiceLocator.Container.Single<IStaticDataService>();
         }
 
-        void Update()
-        {
-            if (!m_IsPlaying)
-            {
-                UpdateSprites();
-            }
-        }
-
-        async void UpdateSprites()
-        {
-            m_IsPlaying = true;
-            for (var i = 1; i < PlantSprites.Length; i++)
-            {
-                image.sprite = PlantSprites[i];
-                await Task.Delay((int)(1000 * Time.timeScale));
-            }
-
-            m_IsPlaying = false;
-        }
-
         public void Initialize(PlantType plantType)
         {
-            m_PlantsConfig = m_StaticDataService.ForPlant(plantType);
+            m_PlantConfig = m_StaticDataService.ForPlant(plantType);
+
+            m_SpriteLenght = m_PlantConfig.sprites.Length - 3;
+            m_TimePerFrame = m_PlantConfig.grownTime / m_SpriteLenght;
+
+            StartCoroutine(GrowAndFlower());
+        }
+
+        IEnumerator GrowAndFlower()
+        {
+            yield return StartTimer(m_PlantConfig.grownTime, OnGrowStart, null, OnGrowingTick);
+            yield return StartTimer(m_PlantConfig.floweringTime, null, OnFloweringStop);
+        }
+
+        void OnFloweringStop()
+        {
+            resourceBar.SetVisibility(false);
+            NextGrownIteration();
+        }
+
+        void NextGrownIteration()
+        {
+            m_GrownIteration++;
+            image.sprite = PlantSprites[m_GrownIteration];
+        }
+
+        void OnGrowingTick(float timeSpent)
+        {
+            resourceBar.SetValue(timeSpent / m_PlantConfig.grownTime);
+
+            if (timeSpent > m_TimePerFrame * m_GrownIteration)
+            {
+                NextGrownIteration();
+            }
+        }
+
+        void OnGrowStart()
+        {
+            m_GrownIteration = 1;
+            image.sprite = PlantSprites[m_GrownIteration];
+        }
+
+        IEnumerator StartTimer(float duration, Action onStart = null, Action onEnd = null, Action<float> onTick = null)
+        {
+            onStart?.Invoke();
+            var timeSpent = 0f;
+            while (timeSpent < duration)
+            {
+                yield return null;
+                timeSpent += Time.deltaTime;
+                onTick?.Invoke(timeSpent);
+            }
+
+            onEnd?.Invoke();
         }
     }
 }

@@ -23,7 +23,7 @@ namespace CodeBase.Inventory
         int m_Count;
 
         //TODO: to think
-        PlantsConfig m_PlantsConfig;
+        PlantConfig m_PlantConfig;
         IEventsService m_EventsService;
         public event Action<InventoryItem> OnDestroyItem;
 
@@ -44,23 +44,23 @@ namespace CodeBase.Inventory
             m_EventsService.Unsubscribe<OnPlantSpawned>(OnPlantSpawned);
         }
 
-        public void Initialize(PlantsConfig plantsConfig, int plantCount)
+        public void Initialize(PlantConfig plantConfig, int plantCount)
         {
-            m_PlantsConfig = plantsConfig;
-            image.sprite = plantsConfig.sprites[0];
-            itemName.text = plantsConfig.type.ToString();
+            m_PlantConfig = plantConfig;
+            image.sprite = plantConfig.sprites[0];
+            itemName.text = plantConfig.type.ToString();
             ChangeAmount(plantCount);
         }
 
         public PlantData UpdateProgress()
         {
-            return m_PlantsConfig == null ? null : new PlantData(m_PlantsConfig.type, m_Count);
+            return m_PlantConfig == null ? null : new PlantData(m_PlantConfig.type, m_Count);
         }
 
         void OnPlantSpawned(OnPlantSpawned evt)
         {
             var plantType = evt.PlantType;
-            if (plantType != m_PlantsConfig.type)
+            if (plantType != m_PlantConfig.type)
             {
                 return;
             }
@@ -87,7 +87,7 @@ namespace CodeBase.Inventory
         {
             var evt = new OnPlantSeedSelected
             {
-                PlantsConfig = m_PlantsConfig,
+                PlantConfig = m_PlantConfig,
             };
             m_EventsService.Post(evt);
         }

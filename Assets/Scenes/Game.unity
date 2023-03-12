@@ -339,6 +339,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1370798942, guid: e2c05f05c7b1a7249a2ae0f06f9722cb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 199.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 1370798942, guid: e2c05f05c7b1a7249a2ae0f06f9722cb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 188.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1370798942, guid: e2c05f05c7b1a7249a2ae0f06f9722cb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -33.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1370798942, guid: e2c05f05c7b1a7249a2ae0f06f9722cb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -33.65
+      objectReference: {fileID: 0}
     - target: {fileID: 226039946333007626, guid: e2c05f05c7b1a7249a2ae0f06f9722cb, type: 3}
       propertyPath: m_Name
       value: GamePlay
